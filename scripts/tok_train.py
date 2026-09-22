@@ -17,6 +17,9 @@ parser = argparse.ArgumentParser(description='Train a BPE tokenizer')
 parser.add_argument('--max-chars', type=int, default=2_000_000_000, help='Maximum characters to train on (default: 2B)')
 parser.add_argument('--doc-cap', type=int, default=10_000, help='Maximum characters per document (default: 10,000)')
 parser.add_argument('--vocab-size', type=int, default=32768, help='Vocabulary size (default: 32768 = 2^15)')
+parser.add_argument('--out-dir', type=str, default=None,
+                    help='Directory to save the tokenizer into (default: <base_dir>/tokenizer). '
+                         'Set this to keep several tokenizers side by side instead of overwriting.')
 args = parser.parse_args()
 print(f"max_chars: {args.max_chars:,}")
 print(f"doc_cap: {args.doc_cap:,}")
@@ -54,7 +57,11 @@ print(f"Training time: {train_time:.2f}s")
 # -----------------------------------------------------------------------------
 # Save the tokenizer to disk
 base_dir = get_base_dir()
-tokenizer_dir = os.path.join(base_dir, "tokenizer")
+# NOTE: the default path is shared, so training a second tokenizer overwrites the first.
+# Pass --out-dir to keep the vocab-size experiments side by side.
+tokenizer_dir = args.out_dir if args.out_dir else os.path.join(base_dir, "tokenizer")
+os.makedirs(tokenizer_dir, exist_ok=True)
+print(f"Saving tokenizer to: {tokenizer_dir}")
 tokenizer.save(tokenizer_dir)
 
 # -----------------------------------------------------------------------------

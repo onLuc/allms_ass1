@@ -29,6 +29,7 @@ from nanochat.gpt import GPT, GPTConfig, Linear
 from nanochat.dataloader import tokenizing_distributed_data_loader_bos_bestfit, tokenizing_distributed_data_loader_with_state_bos_bestfit
 from nanochat.common import compute_init, compute_cleanup, print0, DummyWandb, print_banner, get_base_dir, autodetect_device_type, get_peak_flops, COMPUTE_DTYPE, COMPUTE_DTYPE_REASON, is_ddp_initialized
 from nanochat.tokenizer import get_tokenizer, get_token_bytes
+from nanochat.jsonl_logger import get_run_logger
 from nanochat.checkpoint_manager import save_checkpoint, load_checkpoint
 from nanochat.loss_eval import evaluate_bpb
 from nanochat.engine import Engine
@@ -75,6 +76,7 @@ parser.add_argument("--core-metric-every", type=int, default=2000, help="evaluat
 parser.add_argument("--core-metric-max-per-task", type=int, default=500, help="examples per task for CORE metric")
 parser.add_argument("--sample-every", type=int, default=2000, help="sample from model every N steps (-1 = disable)")
 parser.add_argument("--save-every", type=int, default=-1, help="save checkpoints every N steps (-1 = only at end)")
+parser.add_argument("--log-every", type=int, default=100, help="write a train-loss record every N steps (lower it for short runs)")
 # Output
 parser.add_argument("--model-tag", type=str, default=None, help="override model tag for checkpoint directory name")
 args = parser.parse_args()
@@ -95,9 +97,15 @@ else:
     gpu_peak_flops = float('inf')  # MFU not meaningful for CPU/MPS
 print0(f"COMPUTE_DTYPE: {COMPUTE_DTYPE} ({COMPUTE_DTYPE_REASON})")
 
-# wandb logging init
-use_dummy_wandb = args.run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat", name=args.run, config=user_config)
+# logging init: ALWAYS write a structured .jsonl to disk; wandb only if --run is given.
+# Retrofitting logging after a 2-hour run is impossible, so this is on by default.
+wandb_run = get_run_logger(
+    run=args.run,
+    project="nanochat",
+    config=user_config,
+    tag=args.model_tag if args.model_tag else f"base_d{args.depth}",
+    master_process=master_process,
+)
 
 # Flash Attention status
 from nanochat.flash_attention import USE_FA3
@@ -356,6 +364,22 @@ print0(f"Total number of training tokens: {total_tokens:,}")
 print0(f"Tokens : Scaling params ratio: {total_batch_size * num_iterations / num_scaling_params:.2f}") # e.g. Chinchilla was ~20
 print0(f"Total training FLOPs estimate: {num_flops_per_token * total_tokens:e}")
 
+# Record every number the report asks for (depth -> architecture -> horizon) in one place.
+wandb_run.log_meta("model", {
+    "depth": args.depth,
+    "model_config": model_config_kwargs,
+    "param_counts": param_counts,
+    "num_scaling_params": num_scaling_params,
+    "num_flops_per_token": num_flops_per_token,
+    "total_batch_size": total_batch_size,
+    "num_iterations": num_iterations,
+    "total_tokens": total_tokens,
+    "tokens_per_scaling_param": total_tokens / num_scaling_params,
+    "total_training_flops_estimate": num_flops_per_token * total_tokens,
+    "compute_dtype": str(COMPUTE_DTYPE),
+    "world_size": ddp_world_size,
+})
+
 # Learning rate schedule (linear warmup, constant, linear warmdown)
 def get_lr_multiplier(it):
     warmup_iters = args.warmup_steps
@@ -565,7 +589,7 @@ while True:
         eta_str = ""
     epoch = f"{dataloader_state_dict['epoch']} pq: {dataloader_state_dict['pq_idx']} rg: {dataloader_state_dict['rg_idx']}"
     print0(f"step {step:05d}/{num_iterations:05d} ({pct_done:.2f}%) | loss: {debiased_smooth_loss:.6f} | lrm: {lrm:.2f} | dt: {dt * 1000:.2f}ms | tok/sec: {tok_per_sec:,} | bf16_mfu: {mfu:.2f} | epoch: {epoch} | total time: {total_training_time/60:.2f}m{eta_str}")
-    if step % 100 == 0:
+    if step % args.log_every == 0:
         log_data = {
             "step": step,
             "total_training_flops": flops_so_far,
@@ -598,6 +622,14 @@ print0(f"Peak memory usage: {get_max_memory() / 1024 / 1024:.2f}MiB")
 print0(f"Total training time: {total_training_time/60:.2f}m")
 if val_bpb is not None:
     print0(f"Minimum validation bpb: {min_val_bpb:.6f}")
+wandb_run.log_meta("summary", {
+    "peak_memory_mib": get_max_memory() / 1024 / 1024,
+    "total_training_time_s": total_training_time,
+    "final_val_bpb": val_bpb,
+    "min_val_bpb": min_val_bpb,
+    "checkpoint_dir": checkpoint_dir,
+    "final_step": step,
+})
 
 # cleanup
 wandb_run.finish() # wandb run finish

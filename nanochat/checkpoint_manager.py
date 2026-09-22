@@ -160,23 +160,26 @@ def load_model_from_dir(checkpoints_dir, device, phase, model_tag=None, step=Non
     model, tokenizer, meta_data = build_model(checkpoint_dir, step, device, phase)
     return model, tokenizer, meta_data
 
+# Maps a logical training stage to its checkpoint directory.
+# "mid" is our addition: a mid-training stage that sits between pretraining and SFT.
+# Keeping it in its own directory (rather than sharing chatsft_checkpoints) means
+# find_largest_model() can never confuse a mid-training and an SFT checkpoint.
+SOURCE_TO_DIR = {
+    "base": "base_checkpoints",
+    "mid": "midtrain_checkpoints",
+    "sft": "chatsft_checkpoints",
+    "rl": "chatrl_checkpoints",
+}
+
 def load_model(source, *args, **kwargs):
-    model_dir = {
-        "base": "base_checkpoints",
-        "sft": "chatsft_checkpoints",
-        "rl": "chatrl_checkpoints",
-    }[source]
+    model_dir = SOURCE_TO_DIR[source]
     base_dir = get_base_dir()
     checkpoints_dir = os.path.join(base_dir, model_dir)
     return load_model_from_dir(checkpoints_dir, *args, **kwargs)
 
 def load_optimizer_state(source, device, rank, model_tag=None, step=None):
     """Load just the optimizer shard for a given rank, without re-loading the model."""
-    model_dir = {
-        "base": "base_checkpoints",
-        "sft": "chatsft_checkpoints",
-        "rl": "chatrl_checkpoints",
-    }[source]
+    model_dir = SOURCE_TO_DIR[source]
     base_dir = get_base_dir()
     checkpoints_dir = os.path.join(base_dir, model_dir)
     if model_tag is None:

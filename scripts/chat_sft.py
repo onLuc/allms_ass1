@@ -1,12 +1,27 @@
 """
-Supervised fine-tuning (SFT) the model.
-Run as:
+Post-training the model in stages.
 
-python -m scripts.chat_sft
+Upstream nanochat has exactly two training stages: pretraining and SFT. This version
+adds a *mid-training* stage in between, so that "adapting the model to reasoning and
+knowledge" is separated from "teaching it to follow instructions", and the effect of
+each can be measured independently.
 
-Or torchrun for training:
+The stage is chosen with --stage and only changes two things: which data mixture is
+trained on, and which checkpoint directory is written to. Where the *initial weights*
+come from is an independent choice (--source), so the stages compose freely.
 
-torchrun --standalone --nproc_per_node=8 -m scripts.chat_sft -- --device-batch-size=16
+    # Stage 1: mid-training. base checkpoint -> reasoning/knowledge only (MMLU + GSM8K)
+    python -m scripts.chat_sft --stage=mid --source=base
+
+    # Stage 2: SFT. mid-training checkpoint -> instruction following only (SmolTalk)
+    python -m scripts.chat_sft --stage=sft --source=mid
+
+    # Baseline for comparison: upstream's single-stage mixture, straight off the base model
+    python -m scripts.chat_sft --stage=joint --source=base
+
+Or distributed:
+
+    torchrun --standalone --nproc_per_node=8 -m scripts.chat_sft -- --device-batch-size=16
 """
 
 import gc
@@ -18,7 +33,8 @@ import wandb
 import torch
 from nanochat.common import compute_init, compute_cleanup, print0, DummyWandb, get_base_dir, autodetect_device_type, get_peak_flops, COMPUTE_DTYPE, COMPUTE_DTYPE_REASON, is_ddp_initialized
 from nanochat.tokenizer import get_token_bytes
-from nanochat.checkpoint_manager import save_checkpoint, load_model, load_optimizer_state
+from nanochat.jsonl_logger import get_run_logger
+from nanochat.checkpoint_manager import save_checkpoint, load_model, load_optimizer_state, SOURCE_TO_DIR
 from nanochat.loss_eval import evaluate_bpb
 import torch.distributed as dist
 from nanochat.flash_attention import HAS_FA3
@@ -32,9 +48,16 @@ from tasks.smoltalk import SmolTalk
 
 # -----------------------------------------------------------------------------
 # CLI arguments
-parser = argparse.ArgumentParser(description="Supervised fine-tuning (SFT) the model")
+parser = argparse.ArgumentParser(description="Post-train the model (mid-training and/or SFT)")
+# Staging
+parser.add_argument("--stage", type=str, default="sft", choices=["mid", "sft", "joint"],
+                    help="mid = reasoning/knowledge only (MMLU+GSM8K); sft = instruction following only (SmolTalk); joint = upstream's single-stage mixture")
+parser.add_argument("--source", type=str, default="base", choices=["base", "mid", "sft"],
+                    help="which checkpoint to initialise the weights from")
+parser.add_argument("--out-tag", type=str, default=None, help="tag of the checkpoint directory to write (default: same as --model-tag, else d<depth>)")
 # Logging
 parser.add_argument("--run", type=str, default="dummy", help="wandb run name ('dummy' disables wandb logging)")
+parser.add_argument("--log-every", type=int, default=10, help="write a train-loss record every N steps")
 # Runtime
 parser.add_argument("--device-type", type=str, default="", help="cuda|cpu|mps (empty = autodetect)")
 # Model loading
@@ -66,6 +89,11 @@ parser.add_argument("--mmlu-epochs", type=int, default=3, help="number of epochs
 parser.add_argument("--gsm8k-epochs", type=int, default=4, help="number of epochs of GSM8K in training mixture (teaches Math and Tool Use)")
 args = parser.parse_args()
 user_config = vars(args).copy()
+
+# Which checkpoint directory this stage writes into. "joint" reproduces upstream
+# behaviour and therefore writes where upstream writes.
+STAGE_TO_OUTPUT_SOURCE = {"mid": "mid", "sft": "sft", "joint": "sft"}
+output_source = STAGE_TO_OUTPUT_SOURCE[args.stage]
 # -----------------------------------------------------------------------------
 
 # Compute init
@@ -82,16 +110,22 @@ if device_type == "cuda":
 else:
     gpu_peak_flops = float('inf')  # MFU not meaningful for CPU/MPS
 
-# wandb logging init
-use_dummy_wandb = args.run == "dummy" or not master_process
-wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat-sft", name=args.run, config=user_config)
+# logging init: always write a structured .jsonl; wandb only if --run is given
+wandb_run = get_run_logger(
+    run=args.run,
+    project=f"nanochat-{args.stage}",
+    config=user_config,
+    tag=f"{args.stage}_{args.out_tag or args.model_tag or 'model'}",
+    master_process=master_process,
+)
 
 # Flash Attention status
 if not HAS_FA3:
     print0("WARNING: Flash Attention 3 not available, using PyTorch SDPA fallback. Training will be less efficient.")
 
-# Load the model and tokenizer
-model, tokenizer, meta = load_model("base", device, phase="train", model_tag=args.model_tag, step=args.model_step)
+# Load the model and tokenizer from whichever stage we are continuing from
+print0(f"Stage: {args.stage} | initialising weights from source: {args.source}")
+model, tokenizer, meta = load_model(args.source, device, phase="train", model_tag=args.model_tag, step=args.model_step)
 
 # Inherit training hyperparameters from pretrained checkpoint (None = inherit, explicit value = override)
 pretrain_user_config = meta.get("user_config", {})
@@ -126,6 +160,16 @@ print0(f"Tokens / micro-batch / rank: {args.device_batch_size} x {args.max_seq_l
 print0(f"Tokens / micro-batch: {world_tokens_per_fwdbwd:,}")
 print0(f"Total batch size {args.total_batch_size:,} => gradient accumulation steps: {grad_accum_steps}")
 token_bytes = get_token_bytes(device=device)
+wandb_run.log_meta("stage", {
+    "stage": args.stage,
+    "source": args.source,
+    "out_tag": args.out_tag or args.model_tag,
+    "loaded_from_meta_step": meta.get("step"),
+    "model_config": {k: getattr(model.config, k) for k in ("n_layer", "n_head", "n_embd", "vocab_size", "sequence_len")},
+    "mmlu_epochs": args.mmlu_epochs,
+    "gsm8k_epochs": args.gsm8k_epochs,
+    "compute_dtype": str(COMPUTE_DTYPE),
+})
 
 # Initialize the Optimizer (combined MuonAdamW: Muon for matrix params, AdamW for rest)
 # Note that pretraining ramps weight_decay to zero by end of pretraining, so SFT continues with zero
@@ -137,7 +181,7 @@ optimizer = model.setup_optimizer(unembedding_lr=args.unembedding_lr, embedding_
 # restore our fresh SFT LRs after loading.
 base_dir = get_base_dir()
 if args.load_optimizer:
-    optimizer_data = load_optimizer_state("base", device, rank=ddp_rank, model_tag=args.model_tag, step=args.model_step)
+    optimizer_data = load_optimizer_state(args.source, device, rank=ddp_rank, model_tag=args.model_tag, step=args.model_step)
     if optimizer_data is not None:
         base_lrs = [group["lr"] for group in optimizer.param_groups]
         optimizer.load_state_dict(optimizer_data)
@@ -158,14 +202,36 @@ for group in optimizer.param_groups:
     group["lr"] = group["lr"] * args.init_lr_frac
     group["initial_lr"] = group["lr"]
 
-# SFT data mixture and DataLoader
-train_tasks = [
-    SmolTalk(split="train"), # 460K rows of general conversations
-    *[MMLU(subset="all", split="auxiliary_train") for _ in range(args.mmlu_epochs)], # 100K rows per epoch
-    *[GSM8K(subset="main", split="train") for _ in range(args.gsm8k_epochs)], # 8K rows per epoch
-]
+# -----------------------------------------------------------------------------
+# Training data mixture, selected by stage.
+#
+#   mid   - reasoning and knowledge adaptation only. No conversational data at all, so
+#           any change in ARC/MMLU/GSM8K after this stage is attributable to task data
+#           rather than to instruction formatting.
+#   sft   - instruction following only. SmolTalk teaches the chat special tokens and
+#           the general "assistant" register on top of whatever came before.
+#   joint - upstream nanochat's single-stage mixture, kept as the control condition.
+if args.stage == "mid":
+    train_tasks = [
+        *[MMLU(subset="all", split="auxiliary_train") for _ in range(args.mmlu_epochs)], # 100K rows per epoch
+        *[GSM8K(subset="main", split="train") for _ in range(args.gsm8k_epochs)], # 8K rows per epoch
+    ]
+elif args.stage == "sft":
+    train_tasks = [
+        SmolTalk(split="train"), # 460K rows of general conversations
+    ]
+elif args.stage == "joint":
+    train_tasks = [
+        SmolTalk(split="train"),
+        *[MMLU(subset="all", split="auxiliary_train") for _ in range(args.mmlu_epochs)],
+        *[GSM8K(subset="main", split="train") for _ in range(args.gsm8k_epochs)],
+    ]
 train_dataset = TaskMixture(train_tasks)
-print0(f"Training mixture: {len(train_dataset):,} rows (MMLU x{args.mmlu_epochs}, GSM8K x{args.gsm8k_epochs})")
+print0(f"Stage '{args.stage}' training mixture: {len(train_dataset):,} rows from {len(train_tasks)} task instance(s)")
+
+# The validation mixture is deliberately held FIXED across all stages. If the val set
+# changed with the train set, val bpb from mid-training and from SFT would be measured
+# on different distributions and could not be put on the same axis.
 val_dataset = TaskMixture([
     SmolTalk(split="test"), # 24K rows in test set
     MMLU(subset="all", split="test", stop=5200), # 14K rows in test set, use only 5.2K to match the train ratios
@@ -390,8 +456,9 @@ while True:
 
     # save checkpoint at the end of the run (all ranks participate so each saves its optimizer shard)
     if last_step:
-        output_dirname = args.model_tag if args.model_tag else f"d{depth}" # e.g. d12
-        checkpoint_dir = os.path.join(base_dir, "chatsft_checkpoints", output_dirname)
+        output_dirname = args.out_tag or args.model_tag or f"d{depth}" # e.g. d2
+        checkpoint_dir = os.path.join(base_dir, SOURCE_TO_DIR[output_source], output_dirname)
+        print0(f"Stage '{args.stage}' saving checkpoint to: {checkpoint_dir}")
         save_checkpoint(
             checkpoint_dir,
             step,
@@ -467,7 +534,7 @@ while True:
     if step > 10:
         total_training_time += dt # only count the time after the first 10 steps
     print0(f"step {step:05d} ({pct_done:.2f}%) | loss: {debiased_smooth_loss:.6f} | lrm: {lrm:.2f} | dt: {dt * 1000:.2f}ms | tok/sec: {tok_per_sec:,} | mfu: {mfu:.2f} | epoch: {current_epoch} | total time: {total_training_time/60:.2f}m")
-    if step % 10 == 0:
+    if step % args.log_every == 0:
         wandb_run.log({
             "step": step,
             "total_training_flops": flops_so_far,
