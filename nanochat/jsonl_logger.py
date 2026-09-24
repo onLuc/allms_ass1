@@ -108,7 +108,8 @@ def get_run_logger(run, project, config, tag, master_process=True, log_dir=None)
         import wandb
         inner = wandb.init(project=project, name=run, config=config)
 
-    log_dir = log_dir or os.path.join(get_base_dir(), "logs")
+    # log_dir = log_dir or os.path.join(get_base_dir(), "logs")
+    log_dir = log_dir or os.environ.get("NANOCHAT_LOG_DIR") or os.path.join(get_base_dir(), "logs")
     stamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
     path = os.path.join(log_dir, f"{tag}_{stamp}.jsonl")
     logger = JsonlLogger(path=path, inner=inner)
