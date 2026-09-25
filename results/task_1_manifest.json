@@ -1,0 +1,18 @@
+{
+  "sample_bytes_per_tokenizer": 500000000,
+  "vocab_sizes": [
+    8192,
+    32768
+  ],
+  "selected_vocab_size": 32768,
+  "active_tokenizer": "/data/s3774740/allms-ass1/cache/tokenizer",
+  "run_tag": "d2v32768",
+  "outputs": [
+    "task_1_tokenizer_comparison.json",
+    "task_1_tokenizer_comparison.md",
+    "task_1_vocab_model_sizing.json",
+    "task_1_merge_tree.txt",
+    "task_1_merge_tree.dot",
+    "task_1_merge_tree.json"
+  ]
+}

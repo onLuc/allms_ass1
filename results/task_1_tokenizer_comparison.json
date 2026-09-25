@@ -1,0 +1,140 @@
+{
+  "tokenizer_8192": {
+    "dir": "/data/s3774740/allms-ass1/cache/tokenizer_8192",
+    "vocab_size": 8192,
+    "embedding_cost_at_n_embd": {
+      "128": {
+        "wte": 1048576,
+        "lm_head": 1048576,
+        "per_value_embed": 1048576
+      }
+    },
+    "probes": {
+      "numbers": {
+        "chars": 85,
+        "bytes": 85,
+        "tokens": 35,
+        "bytes_per_token": 2.4285714285714284,
+        "tokens_per_char": 0.4117647058823529
+      },
+      "python": {
+        "chars": 134,
+        "bytes": 134,
+        "tokens": 69,
+        "bytes_per_token": 1.9420289855072463,
+        "tokens_per_char": 0.5149253731343284
+      },
+      "dutch": {
+        "chars": 76,
+        "bytes": 76,
+        "tokens": 36,
+        "bytes_per_token": 2.111111111111111,
+        "tokens_per_char": 0.47368421052631576
+      },
+      "chinese": {
+        "chars": 16,
+        "bytes": 48,
+        "tokens": 48,
+        "bytes_per_token": 1.0,
+        "tokens_per_char": 3.0
+      },
+      "whitespace": {
+        "chars": 56,
+        "bytes": 56,
+        "tokens": 19,
+        "bytes_per_token": 2.9473684210526314,
+        "tokens_per_char": 0.3392857142857143
+      },
+      "rare_words": {
+        "chars": 82,
+        "bytes": 82,
+        "tokens": 32,
+        "bytes_per_token": 2.5625,
+        "tokens_per_char": 0.3902439024390244
+      },
+      "urls": {
+        "chars": 99,
+        "bytes": 99,
+        "tokens": 53,
+        "bytes_per_token": 1.8679245283018868,
+        "tokens_per_char": 0.5353535353535354
+      },
+      "english": {
+        "chars": 200000,
+        "bytes": 200333,
+        "tokens": 49853,
+        "bytes_per_token": 4.0184743144845845,
+        "tokens_per_char": 0.249265
+      }
+    }
+  },
+  "tokenizer_32768": {
+    "dir": "/data/s3774740/allms-ass1/cache/tokenizer_32768",
+    "vocab_size": 32768,
+    "embedding_cost_at_n_embd": {
+      "128": {
+        "wte": 4194304,
+        "lm_head": 4194304,
+        "per_value_embed": 4194304
+      }
+    },
+    "probes": {
+      "numbers": {
+        "chars": 85,
+        "bytes": 85,
+        "tokens": 35,
+        "bytes_per_token": 2.4285714285714284,
+        "tokens_per_char": 0.4117647058823529
+      },
+      "python": {
+        "chars": 134,
+        "bytes": 134,
+        "tokens": 65,
+        "bytes_per_token": 2.0615384615384613,
+        "tokens_per_char": 0.48507462686567165
+      },
+      "dutch": {
+        "chars": 76,
+        "bytes": 76,
+        "tokens": 32,
+        "bytes_per_token": 2.375,
+        "tokens_per_char": 0.42105263157894735
+      },
+      "chinese": {
+        "chars": 16,
+        "bytes": 48,
+        "tokens": 43,
+        "bytes_per_token": 1.1162790697674418,
+        "tokens_per_char": 2.6875
+      },
+      "whitespace": {
+        "chars": 56,
+        "bytes": 56,
+        "tokens": 14,
+        "bytes_per_token": 4.0,
+        "tokens_per_char": 0.25
+      },
+      "rare_words": {
+        "chars": 82,
+        "bytes": 82,
+        "tokens": 25,
+        "bytes_per_token": 3.28,
+        "tokens_per_char": 0.3048780487804878
+      },
+      "urls": {
+        "chars": 99,
+        "bytes": 99,
+        "tokens": 42,
+        "bytes_per_token": 2.357142857142857,
+        "tokens_per_char": 0.42424242424242425
+      },
+      "english": {
+        "chars": 200000,
+        "bytes": 200333,
+        "tokens": 41768,
+        "bytes_per_token": 4.796327331928749,
+        "tokens_per_char": 0.20884
+      }
+    }
+  }
+}

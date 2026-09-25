@@ -1076,6 +1076,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "filelock" },
     { name = "kernels" },
+    { name = "matplotlib" },
     { name = "numpy" },
     { name = "psutil" },
     { name = "pyarrow" },
@@ -1110,6 +1111,7 @@ dev = [
 requires-dist = [
     { name = "filelock", specifier = ">=3.19.0" },
     { name = "kernels", specifier = ">=0.11.7" },
+    { name = "matplotlib", specifier = ">=3.10.8" },
     { name = "numpy", specifier = ">=1.26.0" },
     { name = "psutil", specifier = ">=7.1.0" },
     { name = "pyarrow", specifier = ">=21.0.0" },

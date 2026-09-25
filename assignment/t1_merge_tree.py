@@ -1,8 +1,7 @@
 """Print the BPE merge tree of one word, with the pair count of every merge at the moment
-it was learned. Run from the repo root: python -m assignment.t1_merge_tree"""
-
-
-import os, regex
+it was learned. Run from the repo root: python -m assignment.merge_tree"""
+import os, regex, functools
+import matplotlib.pyplot as plt
 from collections import Counter
 from nanochat.tokenizer import RustBPETokenizer
 from nanochat.common import get_base_dir
@@ -34,6 +33,7 @@ for batch in parquets_iter_batched(split="train"):
     if nbytes >= SAMPLE_BYTES:
         break
 
+@functools.cache  # the tree is printed and drawn, so count each merge only once
 def pair_count(a, b, rank):
     """How often the pair (a, b) occurred when merge `rank` was learned."""
     total = 0
@@ -53,7 +53,43 @@ def show(token, indent=""):
     show(a, indent + "    ")
     show(b, indent + "    ")
 
+def draw(tokens):
+    """Draw the merge tree(s) and save them as a PNG. Leaves are raw bytes, the root is the final token."""
+    fig, ax = plt.subplots()
+    state = {"x": 0, "depth": 0}  # next free leaf position, deepest level reached
+    label = lambda t: t.decode("utf-8", "backslashreplace").replace(" ", "␣")  # show spaces as a visible symbol
+
+    def place(token, depth):
+        state["depth"] = max(state["depth"], depth)
+        rank = ranks[token]
+        if rank < 256:  # raw byte = leaf
+            x, text, color = state["x"], label(token), "#e8e8e8"
+            state["x"] += 1
+        else:
+            a, b = bpe(token, rank)
+            xs = [place(a, depth + 1), place(b, depth + 1)]
+            x = sum(xs) / 2
+            for xc in xs:
+                ax.plot([x, xc], [-depth, -depth - 1], color="gray", lw=1, zorder=1)
+            text, color = f"{label(token)}\n#{rank - 255} | {pair_count(a, b, rank):,}", "#cfe2f3"
+        ax.text(x, -depth, text, ha="center", va="center", fontsize=9, zorder=2,
+                bbox=dict(boxstyle="round,pad=0.3", fc=color, ec="gray"))
+        return x
+
+    for t in tokens:
+        place(t, 0)
+    ax.set_xlim(-0.7, state["x"] - 0.3)
+    ax.set_ylim(-state["depth"] - 0.5, 0.5)
+    ax.axis("off")
+    ax.set_title(f"BPE merge tree for {WORD!r} (vocab size {VOCAB:,})\nnode: token | merge number | pair count when merged")
+    fig.set_size_inches(max(6, 1.1 * state["x"]), 1.3 * (state["depth"] + 1) + 0.8)
+    os.makedirs("assignment/results", exist_ok=True)
+    path = f"assignment/results/merge_tree_{VOCAB}.png"
+    fig.savefig(path, dpi=200, bbox_inches="tight")
+    print(f"\nSaved tree to {path}")
+
 tokens = bpe(WORD.encode("utf-8"), len(ranks))
 print(f"{WORD!r} -> {len(tokens)} token(s): {tokens}\n")
 for t in tokens:
     show(t)
+draw(tokens)

@@ -1,0 +1,360 @@
+{
+  "example": " counterproductive",
+  "vocab_size": 32768,
+  "sample_utf8_bytes": 5000000,
+  "nodes": [
+    {
+      "id": 0,
+      "text": " counter",
+      "rank": 4203,
+      "merge_count": 94,
+      "depth": 0
+    },
+    {
+      "id": 1,
+      "text": " cou",
+      "rank": 1803,
+      "merge_count": 278,
+      "depth": 1
+    },
+    {
+      "id": 2,
+      "text": " c",
+      "rank": 266,
+      "merge_count": 41314,
+      "depth": 2
+    },
+    {
+      "id": 3,
+      "text": " ",
+      "rank": 32,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 4,
+      "text": "c",
+      "rank": 99,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 5,
+      "text": "ou",
+      "rank": 279,
+      "merge_count": 27884,
+      "depth": 2
+    },
+    {
+      "id": 6,
+      "text": "o",
+      "rank": 111,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 7,
+      "text": "u",
+      "rank": 117,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 8,
+      "text": "nter",
+      "rank": 2876,
+      "merge_count": 156,
+      "depth": 1
+    },
+    {
+      "id": 9,
+      "text": "n",
+      "rank": 110,
+      "merge_count": null,
+      "depth": 2
+    },
+    {
+      "id": 10,
+      "text": "ter",
+      "rank": 361,
+      "merge_count": 5480,
+      "depth": 2
+    },
+    {
+      "id": 11,
+      "text": "t",
+      "rank": 116,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 12,
+      "text": "er",
+      "rank": 263,
+      "merge_count": 47178,
+      "depth": 3
+    },
+    {
+      "id": 13,
+      "text": "e",
+      "rank": 101,
+      "merge_count": null,
+      "depth": 4
+    },
+    {
+      "id": 14,
+      "text": "r",
+      "rank": 114,
+      "merge_count": null,
+      "depth": 4
+    },
+    {
+      "id": 15,
+      "text": "p",
+      "rank": 112,
+      "merge_count": null,
+      "depth": 0
+    },
+    {
+      "id": 16,
+      "text": "roductive",
+      "rank": 7576,
+      "merge_count": 25,
+      "depth": 0
+    },
+    {
+      "id": 17,
+      "text": "roduct",
+      "rank": 4762,
+      "merge_count": 45,
+      "depth": 1
+    },
+    {
+      "id": 18,
+      "text": "rodu",
+      "rank": 1336,
+      "merge_count": 297,
+      "depth": 2
+    },
+    {
+      "id": 19,
+      "text": "ro",
+      "rank": 293,
+      "merge_count": 18513,
+      "depth": 3
+    },
+    {
+      "id": 20,
+      "text": "r",
+      "rank": 114,
+      "merge_count": null,
+      "depth": 4
+    },
+    {
+      "id": 21,
+      "text": "o",
+      "rank": 111,
+      "merge_count": null,
+      "depth": 4
+    },
+    {
+      "id": 22,
+      "text": "du",
+      "rank": 464,
+      "merge_count": 2277,
+      "depth": 3
+    },
+    {
+      "id": 23,
+      "text": "d",
+      "rank": 100,
+      "merge_count": null,
+      "depth": 4
+    },
+    {
+      "id": 24,
+      "text": "u",
+      "rank": 117,
+      "merge_count": null,
+      "depth": 4
+    },
+    {
+      "id": 25,
+      "text": "ct",
+      "rank": 297,
+      "merge_count": 15161,
+      "depth": 2
+    },
+    {
+      "id": 26,
+      "text": "c",
+      "rank": 99,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 27,
+      "text": "t",
+      "rank": 116,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 28,
+      "text": "ive",
+      "rank": 386,
+      "merge_count": 4609,
+      "depth": 1
+    },
+    {
+      "id": 29,
+      "text": "i",
+      "rank": 105,
+      "merge_count": null,
+      "depth": 2
+    },
+    {
+      "id": 30,
+      "text": "ve",
+      "rank": 301,
+      "merge_count": 13846,
+      "depth": 2
+    },
+    {
+      "id": 31,
+      "text": "v",
+      "rank": 118,
+      "merge_count": null,
+      "depth": 3
+    },
+    {
+      "id": 32,
+      "text": "e",
+      "rank": 101,
+      "merge_count": null,
+      "depth": 3
+    }
+  ],
+  "edges": [
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      12,
+      14
+    ],
+    [
+      10,
+      12
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      19,
+      21
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      22,
+      23
+    ],
+    [
+      22,
+      24
+    ],
+    [
+      18,
+      22
+    ],
+    [
+      17,
+      18
+    ],
+    [
+      25,
+      26
+    ],
+    [
+      25,
+      27
+    ],
+    [
+      17,
+      25
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      28,
+      29
+    ],
+    [
+      30,
+      31
+    ],
+    [
+      30,
+      32
+    ],
+    [
+      28,
+      30
+    ],
+    [
+      16,
+      28
+    ]
+  ]
+}
