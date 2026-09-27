@@ -1,0 +1,6582 @@
+{
+  "stages": {
+    "MMLU auxiliary_train": {
+      "rows_per_epoch": 99842,
+      "repetitions_in_training_mixture": 3,
+      "mixture_rows": 299526,
+      "first_rows": [
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Multiple Choice question: Rules in the reading room Hello, everyone. Welcome to the school reading room. We hope you have a good time here. Before you go into the reading room, there are some rules you need to keep. 1.The reading room is open from 8:00 a.m. to 5:00 p.m. from Monday to Friday. 2. Don't take your bag into the reading room. 3. Don't talk loudly in the reading room. 4. Don't take any food or drink into the reading room. 5. Take only one book at a time. After you finish reading the book, you must put it back and then you can take another one. Don't take many books to your seat. 6. Before you leave, you must the book to the bookshelf. You can't take any book out of the reading room. How long is the reading room open every day?\n- Ten hours.=A\n- Nine hours.=B\n- Seven hours.=C\n- Eight hours.=D\n\nRespond only with the letter of the correct answer."
+            },
+            {
+              "role": "assistant",
+              "content": "B"
+            }
+          ],
+          "subject": "",
+          "letters": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Multiple Choice question: AFRICAN MANGO FAQs Q : How do I use AFRICAN MANGO? A : It's simple... Just take one rapid - release capsule  , 3 times daily before meals (i.e., 30 minutes before breakfast, lunch, and dinner.) Q : Is it safe? A : Yes. Unlike other diet pills, Pure African Mango Extract (lrvingia gabonensis) does not contain any natural or artificial stimulants. Clinical studies have shown this nutrient to be both safe and well-tolerated. It's easy on your system and helps you lose body fat naturally. Q : Who uses AFRICAN MANGO? A : Everybody from A-List Hollywood movie stars to everyday men and women who want to lose pounds and inches of excess body fat. It's currently popular in Hollywood today because many of today's movie scripts call for actors and actresses to be in their absolute best shape. Q : Do I have to exercise and diet in order to see results? A : Research shows 100% Pure African Mango Extract helped people lose weight and belly fat without additional diet or exercise. However, in order to achieve your best weight-loss results, we highly recommend incorporating fun lifestyle exercises (like walking, tennis, etc.) and replacing high-calorie foods with healthy nutrient-dense foods like fruits, vegetables, and whole grains, and lean proteins. Also, drinking more water daily speeds weight loss, according to a new study from Viginia Tech University. Q : When I place my order, it's a one-time-only transaction  , right? A : Yes. Rest assured. When you shop with us, you can shop with confidence and peace of mind. Every order placed with us is 100% safe and secure. Our site is scanned and tested daily by McAfee SECURE. \"The McAfee SECURE\" trust mark (see the upper-left corner of our website) only appears when the website has passed their intensive, daily security scan. What's more, our customers never have to worry about being enrolled in auto-reship or auto-rebilling   scams  . Each and every order placed with us is a one-time-only transaction. CONSUMER TIP: Beware of sites that offer \"free trials\", which claim to charge only a small fee for shipping. However, more often than not, these \"free trials\" websites will continue to charge your card for regular monthly shipments if you don't return your \"free trials\" within 10 to 14 days. As the Official Website of African Mango, we offer only the purest, most effective African Mango available. What's more, as an accredited business, we do not engage in auto-rebilling, auto-reshipping, or any other business practices that are considered morally unacceptable. Your results, and your satisfaction, are 100% guaranteed. How can we buy African Mango securely?\n- We can place an order securely with the help of search engine.=A\n- The official web site is your best choice.=B\n- McAfee SECURE promises the security of your order.=C\n- Many web sites providing \"free trials\" service are considered to be secure.=D\n\nRespond only with the letter of the correct answer."
+            },
+            {
+              "role": "assistant",
+              "content": "B"
+            }
+          ],
+          "subject": "",
+          "letters": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        },
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Multiple Choice question: Many years ago, children who had good manners kept quiet if their parents were talking with other persons. Today, well-mannered children have more freedom.  Sometimes good manners in one place are bad manners in other place.  Suppose you are a visitor in the prefix = st1 /landofMongolia. Some friends ask you to eat with them. What kind of manners do they want you to have? They want you to give a loud \"burp\" after you finish eating. Burping will show that you like your food. In some countries, if you give a loud burp, you are told to say, \"Excuse me, please.\" In many places people like to eat together. But in some parts of Polynesia, it is bad manners to be seen eating at all. People show their good manners by turning their back on others while they eat.  What are good manners like in an East African town? The people try not to see you. They are being polite. You may see a friend. He may not see you at all. If you're polite, you will sit down beside him. You will wait until he finishes what he is doing. Then he will talk to you.  Suppose you visit a friend in Arabia. You should walk behind the tents until you come to his tent. If you pass in front of the other tents, you will be asked into them. The people will ask you to eat with them. And it is bad manners if you say no. Which of the following sentences is not true according to the passage?\n- Well-mannered children should always keep quiet.=A\n- Eating with others is bad manners.=B\n- Good manners are different from one place to another.=C\n- People always want others to bother them.=D\n\nRespond only with the letter of the correct answer."
+            },
+            {
+              "role": "assistant",
+              "content": "C"
+            }
+          ],
+          "subject": "",
+          "letters": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ]
+        }
+      ]
+    },
+    "GSM8K train": {
+      "rows_per_epoch": 7473,
+      "repetitions_in_training_mixture": 4,
+      "mixture_rows": 29892,
+      "first_rows": [
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Mimi picked up 2 dozen seashells on the beach.  Kyle found twice as many shells as Mimi and put them in his pocket. Leigh grabbed one-third of the shells that Kyle found.  How many seashells did Leigh have?"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Mimi has 2 x 12 = "
+                },
+                {
+                  "type": "python",
+                  "text": "2*12"
+                },
+                {
+                  "type": "python_output",
+                  "text": "24"
+                },
+                {
+                  "type": "text",
+                  "text": "24 sea shells.\nKyle has 24 x 2 = "
+                },
+                {
+                  "type": "python",
+                  "text": "24*2"
+                },
+                {
+                  "type": "python_output",
+                  "text": "48"
+                },
+                {
+                  "type": "text",
+                  "text": "48 sea shells.\nLeigh has 48 / 3 = "
+                },
+                {
+                  "type": "python",
+                  "text": "48/3"
+                },
+                {
+                  "type": "python_output",
+                  "text": "16"
+                },
+                {
+                  "type": "text",
+                  "text": "16 sea shells.\n#### 16"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Frankie's parents let him have many pets. He has six more snakes than he has cats. He has one less parrot than cats. Six of his pets have four legs. He has 2 dogs. How many pets does he have in total?"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "He has 6 - 2 = "
+                },
+                {
+                  "type": "python",
+                  "text": "6-2"
+                },
+                {
+                  "type": "python_output",
+                  "text": "4"
+                },
+                {
+                  "type": "text",
+                  "text": "4 cats.\nHe has 4 - 1 = "
+                },
+                {
+                  "type": "python",
+                  "text": "4-1"
+                },
+                {
+                  "type": "python_output",
+                  "text": "3"
+                },
+                {
+                  "type": "text",
+                  "text": "3 parrots.\nHe has 4 + 6 = "
+                },
+                {
+                  "type": "python",
+                  "text": "4+6"
+                },
+                {
+                  "type": "python_output",
+                  "text": "10"
+                },
+                {
+                  "type": "text",
+                  "text": "10 snakes.\nHe has a total of 2 + 4 + 3 + 10 = "
+                },
+                {
+                  "type": "python",
+                  "text": "2+4+3+10"
+                },
+                {
+                  "type": "python_output",
+                  "text": "19"
+                },
+                {
+                  "type": "text",
+                  "text": "19 pets.\n#### 19"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "role": "user",
+              "content": "Olaf collects colorful toy cars. At first, his collection consisted of 150 cars. His family, knowing his hobby, decided to give him some toy cars. Grandpa gave Olaf twice as many toy cars as the uncle. Dad gave Olaf 10 toy cars, 5 less than Mum. Auntie gave Olaf 6 toy cars, 1 more than the uncle. How many toy cars does Olaf have in total, after receiving all these gifts?"
+            },
+            {
+              "role": "assistant",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Dad gave Olaf 10 toy cars,\nMom has given Olaf 5 more toy cars than Dad, so 10 + 5 = "
+                },
+                {
+                  "type": "python",
+                  "text": "10+5"
+                },
+                {
+                  "type": "python_output",
+                  "text": "15"
+                },
+                {
+                  "type": "text",
+                  "text": "15 toy cars\nAuntie gave Olaf 6 toy cars,\nUncle has given 1 less toy than Auntie, so 6 - 1 = "
+                },
+                {
+                  "type": "python",
+                  "text": "6-1"
+                },
+                {
+                  "type": "python_output",
+                  "text": "5"
+                },
+                {
+                  "type": "text",
+                  "text": "5 toy cars\nGrandpa gave Olaf 2 * 5 = "
+                },
+                {
+                  "type": "python",
+                  "text": "2*5"
+                },
+                {
+                  "type": "python_output",
+                  "text": "10"
+                },
+                {
+                  "type": "text",
+                  "text": "10 toy cars.\nAll the family together gave Olaf 10 +15 + 6 + 5 + 10 = "
+                },
+                {
+                  "type": "python",
+                  "text": "10+15+6+5+10"
+                },
+                {
+                  "type": "python_output",
+                  "text": "46"
+                },
+                {
+                  "type": "text",
+                  "text": "46.\nAdding the cars Olaf already had, Olaf's collection has 150 + 46 = "
+                },
+                {
+                  "type": "python",
+                  "text": "150+46"
+                },
+                {
+                  "type": "python_output",
+                  "text": "196"
+                },
+                {
+                  "type": "text",
+                  "text": "196 cars.\n#### 196"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "SmolTalk train": {
+      "rows_per_epoch": 460341,
+      "repetitions_in_training_mixture": 1,
+      "mixture_rows": 460341,
+      "first_rows": [
+        {
+          "messages": [
+            {
+              "content": "A researcher interested in examining students' study time per day collected data from a random sample of 20 students. Here are the data: \n\n3, 1, 2, 4, 5, 2, 3, 4, 2, 1, 2, 3, 4, 6, 3, 2, 2, 1, 5, 4\n\nWhat is the mean of this dataset? How would you describe or interpret the result?",
+              "role": "user"
+            },
+            {
+              "content": "To calculate the mean, we need to add up all the values and divide by the total number of observations. \n\nThe sum of the values is 3 + 1 + 2 + 4 + 5 + 2 + 3 + 4 + 2 + 1 + 2 + 3 + 4 + 6 + 3 + 2 + 2 + 1 + 5 + 4 = 59.\n\nThere are 20 observations in the dataset. The mean is calculated by dividing the sum by the number of observations: 59 / 20 = 2.95.\n\nThe mean of 2.95 hours per day indicates that, on average, students in this sample spend approximately 3 hours per day studying. This result suggests a relatively moderate amount of daily study time, with most students likely dedicating a few hours to studying each day. However, to better understand the study habits of this sample, further analysis, such as examining the distribution of study times or identifying any outliers, may be necessary.",
+              "role": "assistant"
+            },
+            {
+              "content": "How would you describe the dispersion of this data set. Which measurement or calculation of dispersion would you use to describe and or interpret the dispersion of the data.",
+              "role": "user"
+            },
+            {
+              "content": "To describe the dispersion of the data, I would calculate the standard deviation, as it is a measure of how spread out the individual data points are from the mean value. \n\nThe standard deviation is calculated as the square root of the variance. The variance is calculated as the average of the squared differences between each data point and the mean.\n\nFirst, calculate the variance:\n1. Calculate the deviations from the mean: (3-2.95), (1-2.95), (2-2.95), ..., (4-2.95)\n2. Square these deviations: (0.05)^2, (-1.95)^2, (-0.95)^2, ..., (1.05)^2\n3. Calculate the average of these squared deviations (variance): Σ(xi - μ)^2 / N = 1.3525\n\nThen, calculate the standard deviation:\nStandard deviation (σ) = √variance = √1.3525 = 1.16\n\nThe standard deviation of 1.16 hours indicates a relatively moderate dispersion in the study times among students. This means that most students' study times do not deviate too far from the mean of 2.95 hours.\n\nIn this case, the standard deviation provides a more accurate representation of dispersion than the range (the difference between the maximum and minimum values), as the range can be heavily influenced by extreme values (outliers). The standard deviation, on the other hand, takes into account all the data points and is less affected by outliers.",
+              "role": "assistant"
+            },
+            {
+              "content": "Would a median and or a mode be a better representation for the central tendency in this dataset than the mean.",
+              "role": "user"
+            },
+            {
+              "content": "In this dataset, the median and mode might be more representative of the central tendency than the mean due to the presence of a few higher values (5, 6) that may be pulling the mean slightly upwards.\n\nTo calculate the median, first, arrange the data in ascending order: 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6. Since there are 20 values (an even number), the median will be the average of the two middle values: (2 + 3) / 2 = 2.5.\n\nTo calculate the mode, identify the most frequently occurring value in the dataset. The value \"2\" appears 6 times, making it the mode.\n\nConsidering the median (2.5) and mode (2), both are lower than the mean (2.95). This suggests that the mean may be slightly inflated by the higher values in the dataset. The median and mode might provide a more accurate representation of the \"typical\" study time for students in this sample, as they are less affected by extreme values.\n\nIn particular, the mode (2) indicates that the most common study time among students is 2 hours per day. This information can be valuable in understanding the study habits of the students. However, it is essential to consider all three measures of central tendency (mean, median, and mode) to get a comprehensive understanding of the data.",
+              "role": "assistant"
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "content": "You're an AI assistant for text re-writing. Rewrite the input text to make it more professional and formal while retaining its essential content.",
+              "role": "system"
+            },
+            {
+              "content": "Hey Alex,\n\nSo, I've been thinking a lot about our new project on the etymology of ancient languages, and I have a ton of ideas! I was reading this fascinating article about the Proto-Indo-European roots of some modern words, and it got me thinking about how we could really dive deep into this. Like, we could look at how certain words have evolved over time and see if there are any patterns or commonalities. \n\nI know it's a lot to take in, but I think it could be really interesting. Let me know what you think, and maybe we can set up a time to discuss it further. Oh, and don't forget about the conference next month! 😊\n\nTalk soon!\nEleanor",
+              "role": "user"
+            },
+            {
+              "content": "Dear Alex,\n\nI hope this message finds you well. I have been giving considerable thought to our upcoming project on the etymology of ancient languages and have developed several ideas that I believe could enhance our research. Recently, I came across an insightful article discussing the Proto-Indo-European roots of various modern words. This has inspired me to consider a more in-depth exploration of how certain words have evolved over time, potentially uncovering patterns or commonalities that could be significant to our study.\n\nI understand that this is a substantial area of inquiry, but I am confident that it could yield valuable insights. I would appreciate your thoughts on this approach and suggest we schedule a meeting to discuss these ideas in more detail. Additionally, please keep in mind the conference scheduled for next month.\n\nI look forward to your response.\n\nBest regards,\nEleanor",
+              "role": "assistant"
+            }
+          ]
+        },
+        {
+          "messages": [
+            {
+              "content": "Implement a Python function that takes a sequence of integers and outputs the longest non-decreasing contiguous subsequence of the input.\n\n```python\ndef longest_non_decreasing_subsequence(sequence: List[int]) -> List[int]:\n    \"\"\"\n    Find the longest non-decreasing subsequence of the given sequence.\n\n    Args:\n        sequence (List[int]): The input sequence of integers.\n\n    Returns:\n        List[int]: The longest non-decreasing subsequence of the input sequence.\n    \"\"\"\n    # Your implementation goes here\n    ...\n```\n\nThe function should handle empty sequences, negative numbers, and decreasing sequences correctly. The function should return an empty list if the input sequence is empty.\n\nYour code should pass the following assertions:\n```python\nassert longest_non_decreasing_subsequence([1, 2, 3, 5, 2, 4]) == [1, 2, 3, 5]\nassert longest_non_decreasing_subsequence([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]\nassert longest_non_decreasing_subsequence([]) == []\nassert longest_non_decreasing_subsequence([-1, -2, -3]) == [-1]\n```",
+              "role": "user"
+            },
+            {
+              "content": "To find the longest non-decreasing contiguous subsequence, we can use a dynamic programming approach. We iterate through the input sequence, and for each element, we compare it with the previous element. If the current element is greater than or equal to the previous element, we add it to the current subsequence. If it is smaller, we start a new subsequence with the current element. We keep track of the longest subsequence so far, and return it at the end.\n\nIn Python, we can implement this algorithm as follows:\n\n```python\ndef longest_non_decreasing_subsequence(sequence):\n    if not sequence:\n        return []\n    longest = [sequence[0]]\n    current = [sequence[0]]\n    for i in range(1, len(sequence)):\n        if sequence[i] >= current[-1]:\n            current.append(sequence[i])\n        else:\n            if len(current) > len(longest):\n                longest = current\n            current = [sequence[i]]\n    if len(current) > len(longest):\n        longest = current\n    return longest\n```\n\nIn the code, we initialize two variables: `longest` to store the longest subsequence and `current` to store the current subsequence. We iterate through the input sequence, and for each element, we compare it with the previous element. If the current element is greater than or equal to the previous element, we add it to the current subsequence. If it is smaller, we start a new subsequence with the current element. We keep track of the longest subsequence so far, and return it at the end.",
+              "role": "assistant"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "assistant_mask_example": {
+    "conversation": {
+      "messages": [
+        {
+          "content": "A researcher interested in examining students' study time per day collected data from a random sample of 20 students. Here are the data: \n\n3, 1, 2, 4, 5, 2, 3, 4, 2, 1, 2, 3, 4, 6, 3, 2, 2, 1, 5, 4\n\nWhat is the mean of this dataset? How would you describe or interpret the result?",
+          "role": "user"
+        },
+        {
+          "content": "To calculate the mean, we need to add up all the values and divide by the total number of observations. \n\nThe sum of the values is 3 + 1 + 2 + 4 + 5 + 2 + 3 + 4 + 2 + 1 + 2 + 3 + 4 + 6 + 3 + 2 + 2 + 1 + 5 + 4 = 59.\n\nThere are 20 observations in the dataset. The mean is calculated by dividing the sum by the number of observations: 59 / 20 = 2.95.\n\nThe mean of 2.95 hours per day indicates that, on average, students in this sample spend approximately 3 hours per day studying. This result suggests a relatively moderate amount of daily study time, with most students likely dedicating a few hours to studying each day. However, to better understand the study habits of this sample, further analysis, such as examining the distribution of study times or identifying any outliers, may be necessary.",
+          "role": "assistant"
+        },
+        {
+          "content": "How would you describe the dispersion of this data set. Which measurement or calculation of dispersion would you use to describe and or interpret the dispersion of the data.",
+          "role": "user"
+        },
+        {
+          "content": "To describe the dispersion of the data, I would calculate the standard deviation, as it is a measure of how spread out the individual data points are from the mean value. \n\nThe standard deviation is calculated as the square root of the variance. The variance is calculated as the average of the squared differences between each data point and the mean.\n\nFirst, calculate the variance:\n1. Calculate the deviations from the mean: (3-2.95), (1-2.95), (2-2.95), ..., (4-2.95)\n2. Square these deviations: (0.05)^2, (-1.95)^2, (-0.95)^2, ..., (1.05)^2\n3. Calculate the average of these squared deviations (variance): Σ(xi - μ)^2 / N = 1.3525\n\nThen, calculate the standard deviation:\nStandard deviation (σ) = √variance = √1.3525 = 1.16\n\nThe standard deviation of 1.16 hours indicates a relatively moderate dispersion in the study times among students. This means that most students' study times do not deviate too far from the mean of 2.95 hours.\n\nIn this case, the standard deviation provides a more accurate representation of dispersion than the range (the difference between the maximum and minimum values), as the range can be heavily influenced by extreme values (outliers). The standard deviation, on the other hand, takes into account all the data points and is less affected by outliers.",
+          "role": "assistant"
+        },
+        {
+          "content": "Would a median and or a mode be a better representation for the central tendency in this dataset than the mean.",
+          "role": "user"
+        },
+        {
+          "content": "In this dataset, the median and mode might be more representative of the central tendency than the mean due to the presence of a few higher values (5, 6) that may be pulling the mean slightly upwards.\n\nTo calculate the median, first, arrange the data in ascending order: 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 6. Since there are 20 values (an even number), the median will be the average of the two middle values: (2 + 3) / 2 = 2.5.\n\nTo calculate the mode, identify the most frequently occurring value in the dataset. The value \"2\" appears 6 times, making it the mode.\n\nConsidering the median (2.5) and mode (2), both are lower than the mean (2.95). This suggests that the mean may be slightly inflated by the higher values in the dataset. The median and mode might provide a more accurate representation of the \"typical\" study time for students in this sample, as they are less affected by extreme values.\n\nIn particular, the mode (2) indicates that the most common study time among students is 2 hours per day. This information can be valuable in understanding the study habits of the students. However, it is essential to consider all three measures of central tendency (mean, median, and mode) to get a comprehensive understanding of the data.",
+          "role": "assistant"
+        }
+      ]
+    },
+    "tokens": [
+      {
+        "token_index": 0,
+        "token_id": 32759,
+        "text": "<|bos|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 1,
+        "token_id": 32760,
+        "text": "<|user_start|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 2,
+        "token_id": 65,
+        "text": "A",
+        "loss_target": false
+      },
+      {
+        "token_index": 3,
+        "token_id": 9090,
+        "text": " researcher",
+        "loss_target": false
+      },
+      {
+        "token_index": 4,
+        "token_id": 4229,
+        "text": " interested",
+        "loss_target": false
+      },
+      {
+        "token_index": 5,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": false
+      },
+      {
+        "token_index": 6,
+        "token_id": 11659,
+        "text": " examining",
+        "loss_target": false
+      },
+      {
+        "token_index": 7,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": false
+      },
+      {
+        "token_index": 8,
+        "token_id": 39,
+        "text": "'",
+        "loss_target": false
+      },
+      {
+        "token_index": 9,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": false
+      },
+      {
+        "token_index": 10,
+        "token_id": 618,
+        "text": " time",
+        "loss_target": false
+      },
+      {
+        "token_index": 11,
+        "token_id": 579,
+        "text": " per",
+        "loss_target": false
+      },
+      {
+        "token_index": 12,
+        "token_id": 1139,
+        "text": " day",
+        "loss_target": false
+      },
+      {
+        "token_index": 13,
+        "token_id": 5564,
+        "text": " collected",
+        "loss_target": false
+      },
+      {
+        "token_index": 14,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": false
+      },
+      {
+        "token_index": 15,
+        "token_id": 421,
+        "text": " from",
+        "loss_target": false
+      },
+      {
+        "token_index": 16,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": false
+      },
+      {
+        "token_index": 17,
+        "token_id": 4677,
+        "text": " random",
+        "loss_target": false
+      },
+      {
+        "token_index": 18,
+        "token_id": 4090,
+        "text": " sample",
+        "loss_target": false
+      },
+      {
+        "token_index": 19,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": false
+      },
+      {
+        "token_index": 20,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 21,
+        "token_id": 555,
+        "text": "20",
+        "loss_target": false
+      },
+      {
+        "token_index": 22,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": false
+      },
+      {
+        "token_index": 23,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": false
+      },
+      {
+        "token_index": 24,
+        "token_id": 2615,
+        "text": " Here",
+        "loss_target": false
+      },
+      {
+        "token_index": 25,
+        "token_id": 339,
+        "text": " are",
+        "loss_target": false
+      },
+      {
+        "token_index": 26,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 27,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": false
+      },
+      {
+        "token_index": 28,
+        "token_id": 58,
+        "text": ":",
+        "loss_target": false
+      },
+      {
+        "token_index": 29,
+        "token_id": 9752,
+        "text": " \n\n",
+        "loss_target": false
+      },
+      {
+        "token_index": 30,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": false
+      },
+      {
+        "token_index": 31,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 32,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 33,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": false
+      },
+      {
+        "token_index": 34,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 35,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 36,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": false
+      },
+      {
+        "token_index": 37,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 38,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 39,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": false
+      },
+      {
+        "token_index": 40,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 41,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 42,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": false
+      },
+      {
+        "token_index": 43,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 44,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 45,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": false
+      },
+      {
+        "token_index": 46,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 47,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 48,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": false
+      },
+      {
+        "token_index": 49,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 50,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 51,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": false
+      },
+      {
+        "token_index": 52,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 53,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 54,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": false
+      },
+      {
+        "token_index": 55,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 56,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 57,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": false
+      },
+      {
+        "token_index": 58,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 59,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 60,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": false
+      },
+      {
+        "token_index": 61,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 62,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 63,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": false
+      },
+      {
+        "token_index": 64,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 65,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 66,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": false
+      },
+      {
+        "token_index": 67,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 68,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 69,
+        "token_id": 54,
+        "text": "6",
+        "loss_target": false
+      },
+      {
+        "token_index": 70,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 71,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 72,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": false
+      },
+      {
+        "token_index": 73,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 74,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 75,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": false
+      },
+      {
+        "token_index": 76,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 77,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 78,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": false
+      },
+      {
+        "token_index": 79,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 80,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 81,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": false
+      },
+      {
+        "token_index": 82,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 83,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 84,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": false
+      },
+      {
+        "token_index": 85,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": false
+      },
+      {
+        "token_index": 86,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": false
+      },
+      {
+        "token_index": 87,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": false
+      },
+      {
+        "token_index": 88,
+        "token_id": 358,
+        "text": "\n\n",
+        "loss_target": false
+      },
+      {
+        "token_index": 89,
+        "token_id": 1122,
+        "text": "What",
+        "loss_target": false
+      },
+      {
+        "token_index": 90,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": false
+      },
+      {
+        "token_index": 91,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 92,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": false
+      },
+      {
+        "token_index": 93,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": false
+      },
+      {
+        "token_index": 94,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": false
+      },
+      {
+        "token_index": 95,
+        "token_id": 12812,
+        "text": " dataset",
+        "loss_target": false
+      },
+      {
+        "token_index": 96,
+        "token_id": 63,
+        "text": "?",
+        "loss_target": false
+      },
+      {
+        "token_index": 97,
+        "token_id": 878,
+        "text": " How",
+        "loss_target": false
+      },
+      {
+        "token_index": 98,
+        "token_id": 741,
+        "text": " would",
+        "loss_target": false
+      },
+      {
+        "token_index": 99,
+        "token_id": 313,
+        "text": " you",
+        "loss_target": false
+      },
+      {
+        "token_index": 100,
+        "token_id": 4795,
+        "text": " describe",
+        "loss_target": false
+      },
+      {
+        "token_index": 101,
+        "token_id": 350,
+        "text": " or",
+        "loss_target": false
+      },
+      {
+        "token_index": 102,
+        "token_id": 6131,
+        "text": " interpret",
+        "loss_target": false
+      },
+      {
+        "token_index": 103,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 104,
+        "token_id": 981,
+        "text": " result",
+        "loss_target": false
+      },
+      {
+        "token_index": 105,
+        "token_id": 63,
+        "text": "?",
+        "loss_target": false
+      },
+      {
+        "token_index": 106,
+        "token_id": 32761,
+        "text": "<|user_end|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 107,
+        "token_id": 32762,
+        "text": "<|assistant_start|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 108,
+        "token_id": 2096,
+        "text": "To",
+        "loss_target": true
+      },
+      {
+        "token_index": 109,
+        "token_id": 6888,
+        "text": " calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 110,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 111,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 112,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 113,
+        "token_id": 394,
+        "text": " we",
+        "loss_target": true
+      },
+      {
+        "token_index": 114,
+        "token_id": 608,
+        "text": " need",
+        "loss_target": true
+      },
+      {
+        "token_index": 115,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": true
+      },
+      {
+        "token_index": 116,
+        "token_id": 728,
+        "text": " add",
+        "loss_target": true
+      },
+      {
+        "token_index": 117,
+        "token_id": 586,
+        "text": " up",
+        "loss_target": true
+      },
+      {
+        "token_index": 118,
+        "token_id": 491,
+        "text": " all",
+        "loss_target": true
+      },
+      {
+        "token_index": 119,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 120,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 121,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 122,
+        "token_id": 10223,
+        "text": " divide",
+        "loss_target": true
+      },
+      {
+        "token_index": 123,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 124,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 125,
+        "token_id": 2676,
+        "text": " total",
+        "loss_target": true
+      },
+      {
+        "token_index": 126,
+        "token_id": 1186,
+        "text": " number",
+        "loss_target": true
+      },
+      {
+        "token_index": 127,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 128,
+        "token_id": 7779,
+        "text": " observations",
+        "loss_target": true
+      },
+      {
+        "token_index": 129,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 130,
+        "token_id": 9752,
+        "text": " \n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 131,
+        "token_id": 488,
+        "text": "The",
+        "loss_target": true
+      },
+      {
+        "token_index": 132,
+        "token_id": 1880,
+        "text": " sum",
+        "loss_target": true
+      },
+      {
+        "token_index": 133,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 134,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 135,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 136,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 137,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 138,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 139,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 140,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 141,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 142,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 143,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 144,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 145,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 146,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 147,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 148,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 149,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 150,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 151,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 152,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 153,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 154,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 155,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 156,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 157,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 158,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 159,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 160,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 161,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 162,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 163,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 164,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 165,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 166,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 167,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 168,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 169,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 170,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 171,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 172,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 173,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 174,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 175,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 176,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 177,
+        "token_id": 54,
+        "text": "6",
+        "loss_target": true
+      },
+      {
+        "token_index": 178,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 179,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 180,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 181,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 182,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 183,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 184,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 185,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 186,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 187,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 188,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 189,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 190,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 191,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 192,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 193,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 194,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 195,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 196,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 197,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 198,
+        "token_id": 6685,
+        "text": "59",
+        "loss_target": true
+      },
+      {
+        "token_index": 199,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 200,
+        "token_id": 1842,
+        "text": "There",
+        "loss_target": true
+      },
+      {
+        "token_index": 201,
+        "token_id": 339,
+        "text": " are",
+        "loss_target": true
+      },
+      {
+        "token_index": 202,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 203,
+        "token_id": 555,
+        "text": "20",
+        "loss_target": true
+      },
+      {
+        "token_index": 204,
+        "token_id": 7779,
+        "text": " observations",
+        "loss_target": true
+      },
+      {
+        "token_index": 205,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 206,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 207,
+        "token_id": 12812,
+        "text": " dataset",
+        "loss_target": true
+      },
+      {
+        "token_index": 208,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 209,
+        "token_id": 370,
+        "text": " The",
+        "loss_target": true
+      },
+      {
+        "token_index": 210,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 211,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 212,
+        "token_id": 7480,
+        "text": " calculated",
+        "loss_target": true
+      },
+      {
+        "token_index": 213,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 214,
+        "token_id": 16550,
+        "text": " dividing",
+        "loss_target": true
+      },
+      {
+        "token_index": 215,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 216,
+        "token_id": 1880,
+        "text": " sum",
+        "loss_target": true
+      },
+      {
+        "token_index": 217,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 218,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 219,
+        "token_id": 1186,
+        "text": " number",
+        "loss_target": true
+      },
+      {
+        "token_index": 220,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 221,
+        "token_id": 7779,
+        "text": " observations",
+        "loss_target": true
+      },
+      {
+        "token_index": 222,
+        "token_id": 58,
+        "text": ":",
+        "loss_target": true
+      },
+      {
+        "token_index": 223,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 224,
+        "token_id": 6685,
+        "text": "59",
+        "loss_target": true
+      },
+      {
+        "token_index": 225,
+        "token_id": 2801,
+        "text": " /",
+        "loss_target": true
+      },
+      {
+        "token_index": 226,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 227,
+        "token_id": 555,
+        "text": "20",
+        "loss_target": true
+      },
+      {
+        "token_index": 228,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 229,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 230,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 231,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 232,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 233,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 234,
+        "token_id": 488,
+        "text": "The",
+        "loss_target": true
+      },
+      {
+        "token_index": 235,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 236,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 237,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 238,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 239,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 240,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 241,
+        "token_id": 2169,
+        "text": " hours",
+        "loss_target": true
+      },
+      {
+        "token_index": 242,
+        "token_id": 579,
+        "text": " per",
+        "loss_target": true
+      },
+      {
+        "token_index": 243,
+        "token_id": 1139,
+        "text": " day",
+        "loss_target": true
+      },
+      {
+        "token_index": 244,
+        "token_id": 6084,
+        "text": " indicates",
+        "loss_target": true
+      },
+      {
+        "token_index": 245,
+        "token_id": 333,
+        "text": " that",
+        "loss_target": true
+      },
+      {
+        "token_index": 246,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 247,
+        "token_id": 331,
+        "text": " on",
+        "loss_target": true
+      },
+      {
+        "token_index": 248,
+        "token_id": 2469,
+        "text": " average",
+        "loss_target": true
+      },
+      {
+        "token_index": 249,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 250,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 251,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 252,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": true
+      },
+      {
+        "token_index": 253,
+        "token_id": 4090,
+        "text": " sample",
+        "loss_target": true
+      },
+      {
+        "token_index": 254,
+        "token_id": 4199,
+        "text": " spend",
+        "loss_target": true
+      },
+      {
+        "token_index": 255,
+        "token_id": 4450,
+        "text": " approximately",
+        "loss_target": true
+      },
+      {
+        "token_index": 256,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 257,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 258,
+        "token_id": 2169,
+        "text": " hours",
+        "loss_target": true
+      },
+      {
+        "token_index": 259,
+        "token_id": 579,
+        "text": " per",
+        "loss_target": true
+      },
+      {
+        "token_index": 260,
+        "token_id": 1139,
+        "text": " day",
+        "loss_target": true
+      },
+      {
+        "token_index": 261,
+        "token_id": 5884,
+        "text": " studying",
+        "loss_target": true
+      },
+      {
+        "token_index": 262,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 263,
+        "token_id": 617,
+        "text": " This",
+        "loss_target": true
+      },
+      {
+        "token_index": 264,
+        "token_id": 981,
+        "text": " result",
+        "loss_target": true
+      },
+      {
+        "token_index": 265,
+        "token_id": 4209,
+        "text": " suggests",
+        "loss_target": true
+      },
+      {
+        "token_index": 266,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 267,
+        "token_id": 3896,
+        "text": " relatively",
+        "loss_target": true
+      },
+      {
+        "token_index": 268,
+        "token_id": 8356,
+        "text": " moderate",
+        "loss_target": true
+      },
+      {
+        "token_index": 269,
+        "token_id": 1480,
+        "text": " amount",
+        "loss_target": true
+      },
+      {
+        "token_index": 270,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 271,
+        "token_id": 2832,
+        "text": " daily",
+        "loss_target": true
+      },
+      {
+        "token_index": 272,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 273,
+        "token_id": 618,
+        "text": " time",
+        "loss_target": true
+      },
+      {
+        "token_index": 274,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 275,
+        "token_id": 347,
+        "text": " with",
+        "loss_target": true
+      },
+      {
+        "token_index": 276,
+        "token_id": 702,
+        "text": " most",
+        "loss_target": true
+      },
+      {
+        "token_index": 277,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 278,
+        "token_id": 1828,
+        "text": " likely",
+        "loss_target": true
+      },
+      {
+        "token_index": 279,
+        "token_id": 4127,
+        "text": " ded",
+        "loss_target": true
+      },
+      {
+        "token_index": 280,
+        "token_id": 9274,
+        "text": "icating",
+        "loss_target": true
+      },
+      {
+        "token_index": 281,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 282,
+        "token_id": 1280,
+        "text": " few",
+        "loss_target": true
+      },
+      {
+        "token_index": 283,
+        "token_id": 2169,
+        "text": " hours",
+        "loss_target": true
+      },
+      {
+        "token_index": 284,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": true
+      },
+      {
+        "token_index": 285,
+        "token_id": 5884,
+        "text": " studying",
+        "loss_target": true
+      },
+      {
+        "token_index": 286,
+        "token_id": 915,
+        "text": " each",
+        "loss_target": true
+      },
+      {
+        "token_index": 287,
+        "token_id": 1139,
+        "text": " day",
+        "loss_target": true
+      },
+      {
+        "token_index": 288,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 289,
+        "token_id": 1362,
+        "text": " However",
+        "loss_target": true
+      },
+      {
+        "token_index": 290,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 291,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": true
+      },
+      {
+        "token_index": 292,
+        "token_id": 1207,
+        "text": " better",
+        "loss_target": true
+      },
+      {
+        "token_index": 293,
+        "token_id": 1134,
+        "text": " understand",
+        "loss_target": true
+      },
+      {
+        "token_index": 294,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 295,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 296,
+        "token_id": 5582,
+        "text": " habits",
+        "loss_target": true
+      },
+      {
+        "token_index": 297,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 298,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": true
+      },
+      {
+        "token_index": 299,
+        "token_id": 4090,
+        "text": " sample",
+        "loss_target": true
+      },
+      {
+        "token_index": 300,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 301,
+        "token_id": 2082,
+        "text": " further",
+        "loss_target": true
+      },
+      {
+        "token_index": 302,
+        "token_id": 2803,
+        "text": " analysis",
+        "loss_target": true
+      },
+      {
+        "token_index": 303,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 304,
+        "token_id": 716,
+        "text": " such",
+        "loss_target": true
+      },
+      {
+        "token_index": 305,
+        "token_id": 353,
+        "text": " as",
+        "loss_target": true
+      },
+      {
+        "token_index": 306,
+        "token_id": 11659,
+        "text": " examining",
+        "loss_target": true
+      },
+      {
+        "token_index": 307,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 308,
+        "token_id": 4240,
+        "text": " distribution",
+        "loss_target": true
+      },
+      {
+        "token_index": 309,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 310,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 311,
+        "token_id": 1607,
+        "text": " times",
+        "loss_target": true
+      },
+      {
+        "token_index": 312,
+        "token_id": 350,
+        "text": " or",
+        "loss_target": true
+      },
+      {
+        "token_index": 313,
+        "token_id": 7090,
+        "text": " identifying",
+        "loss_target": true
+      },
+      {
+        "token_index": 314,
+        "token_id": 641,
+        "text": " any",
+        "loss_target": true
+      },
+      {
+        "token_index": 315,
+        "token_id": 536,
+        "text": " out",
+        "loss_target": true
+      },
+      {
+        "token_index": 316,
+        "token_id": 11366,
+        "text": "liers",
+        "loss_target": true
+      },
+      {
+        "token_index": 317,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 318,
+        "token_id": 616,
+        "text": " may",
+        "loss_target": true
+      },
+      {
+        "token_index": 319,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 320,
+        "token_id": 2127,
+        "text": " necessary",
+        "loss_target": true
+      },
+      {
+        "token_index": 321,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 322,
+        "token_id": 32763,
+        "text": "<|assistant_end|>",
+        "loss_target": true
+      },
+      {
+        "token_index": 323,
+        "token_id": 32760,
+        "text": "<|user_start|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 324,
+        "token_id": 1175,
+        "text": "How",
+        "loss_target": false
+      },
+      {
+        "token_index": 325,
+        "token_id": 741,
+        "text": " would",
+        "loss_target": false
+      },
+      {
+        "token_index": 326,
+        "token_id": 313,
+        "text": " you",
+        "loss_target": false
+      },
+      {
+        "token_index": 327,
+        "token_id": 4795,
+        "text": " describe",
+        "loss_target": false
+      },
+      {
+        "token_index": 328,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 329,
+        "token_id": 22175,
+        "text": " dispersion",
+        "loss_target": false
+      },
+      {
+        "token_index": 330,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": false
+      },
+      {
+        "token_index": 331,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": false
+      },
+      {
+        "token_index": 332,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": false
+      },
+      {
+        "token_index": 333,
+        "token_id": 935,
+        "text": " set",
+        "loss_target": false
+      },
+      {
+        "token_index": 334,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": false
+      },
+      {
+        "token_index": 335,
+        "token_id": 1634,
+        "text": " Which",
+        "loss_target": false
+      },
+      {
+        "token_index": 336,
+        "token_id": 6208,
+        "text": " measurement",
+        "loss_target": false
+      },
+      {
+        "token_index": 337,
+        "token_id": 350,
+        "text": " or",
+        "loss_target": false
+      },
+      {
+        "token_index": 338,
+        "token_id": 11361,
+        "text": " calculation",
+        "loss_target": false
+      },
+      {
+        "token_index": 339,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": false
+      },
+      {
+        "token_index": 340,
+        "token_id": 22175,
+        "text": " dispersion",
+        "loss_target": false
+      },
+      {
+        "token_index": 341,
+        "token_id": 741,
+        "text": " would",
+        "loss_target": false
+      },
+      {
+        "token_index": 342,
+        "token_id": 313,
+        "text": " you",
+        "loss_target": false
+      },
+      {
+        "token_index": 343,
+        "token_id": 612,
+        "text": " use",
+        "loss_target": false
+      },
+      {
+        "token_index": 344,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": false
+      },
+      {
+        "token_index": 345,
+        "token_id": 4795,
+        "text": " describe",
+        "loss_target": false
+      },
+      {
+        "token_index": 346,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": false
+      },
+      {
+        "token_index": 347,
+        "token_id": 350,
+        "text": " or",
+        "loss_target": false
+      },
+      {
+        "token_index": 348,
+        "token_id": 6131,
+        "text": " interpret",
+        "loss_target": false
+      },
+      {
+        "token_index": 349,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 350,
+        "token_id": 22175,
+        "text": " dispersion",
+        "loss_target": false
+      },
+      {
+        "token_index": 351,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": false
+      },
+      {
+        "token_index": 352,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 353,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": false
+      },
+      {
+        "token_index": 354,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": false
+      },
+      {
+        "token_index": 355,
+        "token_id": 32761,
+        "text": "<|user_end|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 356,
+        "token_id": 32762,
+        "text": "<|assistant_start|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 357,
+        "token_id": 2096,
+        "text": "To",
+        "loss_target": true
+      },
+      {
+        "token_index": 358,
+        "token_id": 4795,
+        "text": " describe",
+        "loss_target": true
+      },
+      {
+        "token_index": 359,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 360,
+        "token_id": 22175,
+        "text": " dispersion",
+        "loss_target": true
+      },
+      {
+        "token_index": 361,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 362,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 363,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": true
+      },
+      {
+        "token_index": 364,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 365,
+        "token_id": 332,
+        "text": " I",
+        "loss_target": true
+      },
+      {
+        "token_index": 366,
+        "token_id": 741,
+        "text": " would",
+        "loss_target": true
+      },
+      {
+        "token_index": 367,
+        "token_id": 6888,
+        "text": " calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 368,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 369,
+        "token_id": 2741,
+        "text": " standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 370,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 371,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 372,
+        "token_id": 353,
+        "text": " as",
+        "loss_target": true
+      },
+      {
+        "token_index": 373,
+        "token_id": 338,
+        "text": " it",
+        "loss_target": true
+      },
+      {
+        "token_index": 374,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 375,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 376,
+        "token_id": 2260,
+        "text": " measure",
+        "loss_target": true
+      },
+      {
+        "token_index": 377,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 378,
+        "token_id": 614,
+        "text": " how",
+        "loss_target": true
+      },
+      {
+        "token_index": 379,
+        "token_id": 2666,
+        "text": " spread",
+        "loss_target": true
+      },
+      {
+        "token_index": 380,
+        "token_id": 536,
+        "text": " out",
+        "loss_target": true
+      },
+      {
+        "token_index": 381,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 382,
+        "token_id": 2201,
+        "text": " individual",
+        "loss_target": true
+      },
+      {
+        "token_index": 383,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": true
+      },
+      {
+        "token_index": 384,
+        "token_id": 2864,
+        "text": " points",
+        "loss_target": true
+      },
+      {
+        "token_index": 385,
+        "token_id": 339,
+        "text": " are",
+        "loss_target": true
+      },
+      {
+        "token_index": 386,
+        "token_id": 421,
+        "text": " from",
+        "loss_target": true
+      },
+      {
+        "token_index": 387,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 388,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 389,
+        "token_id": 1876,
+        "text": " value",
+        "loss_target": true
+      },
+      {
+        "token_index": 390,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 391,
+        "token_id": 9752,
+        "text": " \n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 392,
+        "token_id": 488,
+        "text": "The",
+        "loss_target": true
+      },
+      {
+        "token_index": 393,
+        "token_id": 2741,
+        "text": " standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 394,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 395,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 396,
+        "token_id": 7480,
+        "text": " calculated",
+        "loss_target": true
+      },
+      {
+        "token_index": 397,
+        "token_id": 353,
+        "text": " as",
+        "loss_target": true
+      },
+      {
+        "token_index": 398,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 399,
+        "token_id": 4546,
+        "text": " square",
+        "loss_target": true
+      },
+      {
+        "token_index": 400,
+        "token_id": 3342,
+        "text": " root",
+        "loss_target": true
+      },
+      {
+        "token_index": 401,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 402,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 403,
+        "token_id": 18843,
+        "text": " variance",
+        "loss_target": true
+      },
+      {
+        "token_index": 404,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 405,
+        "token_id": 370,
+        "text": " The",
+        "loss_target": true
+      },
+      {
+        "token_index": 406,
+        "token_id": 18843,
+        "text": " variance",
+        "loss_target": true
+      },
+      {
+        "token_index": 407,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 408,
+        "token_id": 7480,
+        "text": " calculated",
+        "loss_target": true
+      },
+      {
+        "token_index": 409,
+        "token_id": 353,
+        "text": " as",
+        "loss_target": true
+      },
+      {
+        "token_index": 410,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 411,
+        "token_id": 2469,
+        "text": " average",
+        "loss_target": true
+      },
+      {
+        "token_index": 412,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 413,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 414,
+        "token_id": 25624,
+        "text": " squared",
+        "loss_target": true
+      },
+      {
+        "token_index": 415,
+        "token_id": 3827,
+        "text": " differences",
+        "loss_target": true
+      },
+      {
+        "token_index": 416,
+        "token_id": 832,
+        "text": " between",
+        "loss_target": true
+      },
+      {
+        "token_index": 417,
+        "token_id": 915,
+        "text": " each",
+        "loss_target": true
+      },
+      {
+        "token_index": 418,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": true
+      },
+      {
+        "token_index": 419,
+        "token_id": 1141,
+        "text": " point",
+        "loss_target": true
+      },
+      {
+        "token_index": 420,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 421,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 422,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 423,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 424,
+        "token_id": 5407,
+        "text": "First",
+        "loss_target": true
+      },
+      {
+        "token_index": 425,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 426,
+        "token_id": 6888,
+        "text": " calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 427,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 428,
+        "token_id": 18843,
+        "text": " variance",
+        "loss_target": true
+      },
+      {
+        "token_index": 429,
+        "token_id": 1114,
+        "text": ":\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 430,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 431,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 432,
+        "token_id": 20539,
+        "text": " Calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 433,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 434,
+        "token_id": 26570,
+        "text": " deviations",
+        "loss_target": true
+      },
+      {
+        "token_index": 435,
+        "token_id": 421,
+        "text": " from",
+        "loss_target": true
+      },
+      {
+        "token_index": 436,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 437,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 438,
+        "token_id": 58,
+        "text": ":",
+        "loss_target": true
+      },
+      {
+        "token_index": 439,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 440,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 441,
+        "token_id": 45,
+        "text": "-",
+        "loss_target": true
+      },
+      {
+        "token_index": 442,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 443,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 444,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 445,
+        "token_id": 969,
+        "text": "),",
+        "loss_target": true
+      },
+      {
+        "token_index": 446,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 447,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 448,
+        "token_id": 45,
+        "text": "-",
+        "loss_target": true
+      },
+      {
+        "token_index": 449,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 450,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 451,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 452,
+        "token_id": 969,
+        "text": "),",
+        "loss_target": true
+      },
+      {
+        "token_index": 453,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 454,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 455,
+        "token_id": 45,
+        "text": "-",
+        "loss_target": true
+      },
+      {
+        "token_index": 456,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 457,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 458,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 459,
+        "token_id": 969,
+        "text": "),",
+        "loss_target": true
+      },
+      {
+        "token_index": 460,
+        "token_id": 3703,
+        "text": " ...",
+        "loss_target": true
+      },
+      {
+        "token_index": 461,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 462,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 463,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 464,
+        "token_id": 45,
+        "text": "-",
+        "loss_target": true
+      },
+      {
+        "token_index": 465,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 466,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 467,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 468,
+        "token_id": 1759,
+        "text": ")\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 469,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 470,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 471,
+        "token_id": 19606,
+        "text": " Square",
+        "loss_target": true
+      },
+      {
+        "token_index": 472,
+        "token_id": 661,
+        "text": " these",
+        "loss_target": true
+      },
+      {
+        "token_index": 473,
+        "token_id": 26570,
+        "text": " deviations",
+        "loss_target": true
+      },
+      {
+        "token_index": 474,
+        "token_id": 58,
+        "text": ":",
+        "loss_target": true
+      },
+      {
+        "token_index": 475,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 476,
+        "token_id": 48,
+        "text": "0",
+        "loss_target": true
+      },
+      {
+        "token_index": 477,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 478,
+        "token_id": 3642,
+        "text": "05",
+        "loss_target": true
+      },
+      {
+        "token_index": 479,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 480,
+        "token_id": 94,
+        "text": "^",
+        "loss_target": true
+      },
+      {
+        "token_index": 481,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 482,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 483,
+        "token_id": 19912,
+        "text": " (-",
+        "loss_target": true
+      },
+      {
+        "token_index": 484,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 485,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 486,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 487,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 488,
+        "token_id": 94,
+        "text": "^",
+        "loss_target": true
+      },
+      {
+        "token_index": 489,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 490,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 491,
+        "token_id": 19912,
+        "text": " (-",
+        "loss_target": true
+      },
+      {
+        "token_index": 492,
+        "token_id": 48,
+        "text": "0",
+        "loss_target": true
+      },
+      {
+        "token_index": 493,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 494,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 495,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 496,
+        "token_id": 94,
+        "text": "^",
+        "loss_target": true
+      },
+      {
+        "token_index": 497,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 498,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 499,
+        "token_id": 3703,
+        "text": " ...",
+        "loss_target": true
+      },
+      {
+        "token_index": 500,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 501,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 502,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 503,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 504,
+        "token_id": 3642,
+        "text": "05",
+        "loss_target": true
+      },
+      {
+        "token_index": 505,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 506,
+        "token_id": 94,
+        "text": "^",
+        "loss_target": true
+      },
+      {
+        "token_index": 507,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 508,
+        "token_id": 10,
+        "text": "\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 509,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 510,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 511,
+        "token_id": 20539,
+        "text": " Calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 512,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 513,
+        "token_id": 2469,
+        "text": " average",
+        "loss_target": true
+      },
+      {
+        "token_index": 514,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 515,
+        "token_id": 661,
+        "text": " these",
+        "loss_target": true
+      },
+      {
+        "token_index": 516,
+        "token_id": 25624,
+        "text": " squared",
+        "loss_target": true
+      },
+      {
+        "token_index": 517,
+        "token_id": 26570,
+        "text": " deviations",
+        "loss_target": true
+      },
+      {
+        "token_index": 518,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 519,
+        "token_id": 15389,
+        "text": "vari",
+        "loss_target": true
+      },
+      {
+        "token_index": 520,
+        "token_id": 531,
+        "text": "ance",
+        "loss_target": true
+      },
+      {
+        "token_index": 521,
+        "token_id": 5112,
+        "text": "):",
+        "loss_target": true
+      },
+      {
+        "token_index": 522,
+        "token_id": 4886,
+        "text": " �",
+        "loss_target": true
+      },
+      {
+        "token_index": 523,
+        "token_id": 163,
+        "text": "�",
+        "loss_target": true
+      },
+      {
+        "token_index": 524,
+        "token_id": 40,
+        "text": "(",
+        "loss_target": true
+      },
+      {
+        "token_index": 525,
+        "token_id": 3805,
+        "text": "xi",
+        "loss_target": true
+      },
+      {
+        "token_index": 526,
+        "token_id": 827,
+        "text": " -",
+        "loss_target": true
+      },
+      {
+        "token_index": 527,
+        "token_id": 14426,
+        "text": " μ",
+        "loss_target": true
+      },
+      {
+        "token_index": 528,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 529,
+        "token_id": 94,
+        "text": "^",
+        "loss_target": true
+      },
+      {
+        "token_index": 530,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 531,
+        "token_id": 2801,
+        "text": " /",
+        "loss_target": true
+      },
+      {
+        "token_index": 532,
+        "token_id": 487,
+        "text": " N",
+        "loss_target": true
+      },
+      {
+        "token_index": 533,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 534,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 535,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 536,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 537,
+        "token_id": 3257,
+        "text": "35",
+        "loss_target": true
+      },
+      {
+        "token_index": 538,
+        "token_id": 1856,
+        "text": "25",
+        "loss_target": true
+      },
+      {
+        "token_index": 539,
+        "token_id": 358,
+        "text": "\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 540,
+        "token_id": 8870,
+        "text": "Then",
+        "loss_target": true
+      },
+      {
+        "token_index": 541,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 542,
+        "token_id": 6888,
+        "text": " calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 543,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 544,
+        "token_id": 2741,
+        "text": " standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 545,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 546,
+        "token_id": 1114,
+        "text": ":\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 547,
+        "token_id": 23311,
+        "text": "Standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 548,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 549,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 550,
+        "token_id": 207,
+        "text": "�",
+        "loss_target": true
+      },
+      {
+        "token_index": 551,
+        "token_id": 131,
+        "text": "�",
+        "loss_target": true
+      },
+      {
+        "token_index": 552,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 553,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 554,
+        "token_id": 11854,
+        "text": " �",
+        "loss_target": true
+      },
+      {
+        "token_index": 555,
+        "token_id": 154,
+        "text": "�",
+        "loss_target": true
+      },
+      {
+        "token_index": 556,
+        "token_id": 15389,
+        "text": "vari",
+        "loss_target": true
+      },
+      {
+        "token_index": 557,
+        "token_id": 531,
+        "text": "ance",
+        "loss_target": true
+      },
+      {
+        "token_index": 558,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 559,
+        "token_id": 11854,
+        "text": " �",
+        "loss_target": true
+      },
+      {
+        "token_index": 560,
+        "token_id": 154,
+        "text": "�",
+        "loss_target": true
+      },
+      {
+        "token_index": 561,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 562,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 563,
+        "token_id": 3257,
+        "text": "35",
+        "loss_target": true
+      },
+      {
+        "token_index": 564,
+        "token_id": 1856,
+        "text": "25",
+        "loss_target": true
+      },
+      {
+        "token_index": 565,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 566,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 567,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 568,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 569,
+        "token_id": 1546,
+        "text": "16",
+        "loss_target": true
+      },
+      {
+        "token_index": 570,
+        "token_id": 358,
+        "text": "\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 571,
+        "token_id": 488,
+        "text": "The",
+        "loss_target": true
+      },
+      {
+        "token_index": 572,
+        "token_id": 2741,
+        "text": " standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 573,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 574,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 575,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 576,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 577,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 578,
+        "token_id": 1546,
+        "text": "16",
+        "loss_target": true
+      },
+      {
+        "token_index": 579,
+        "token_id": 2169,
+        "text": " hours",
+        "loss_target": true
+      },
+      {
+        "token_index": 580,
+        "token_id": 6084,
+        "text": " indicates",
+        "loss_target": true
+      },
+      {
+        "token_index": 581,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 582,
+        "token_id": 3896,
+        "text": " relatively",
+        "loss_target": true
+      },
+      {
+        "token_index": 583,
+        "token_id": 8356,
+        "text": " moderate",
+        "loss_target": true
+      },
+      {
+        "token_index": 584,
+        "token_id": 22175,
+        "text": " dispersion",
+        "loss_target": true
+      },
+      {
+        "token_index": 585,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 586,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 587,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 588,
+        "token_id": 1607,
+        "text": " times",
+        "loss_target": true
+      },
+      {
+        "token_index": 589,
+        "token_id": 2086,
+        "text": " among",
+        "loss_target": true
+      },
+      {
+        "token_index": 590,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 591,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 592,
+        "token_id": 617,
+        "text": " This",
+        "loss_target": true
+      },
+      {
+        "token_index": 593,
+        "token_id": 1512,
+        "text": " means",
+        "loss_target": true
+      },
+      {
+        "token_index": 594,
+        "token_id": 333,
+        "text": " that",
+        "loss_target": true
+      },
+      {
+        "token_index": 595,
+        "token_id": 702,
+        "text": " most",
+        "loss_target": true
+      },
+      {
+        "token_index": 596,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 597,
+        "token_id": 39,
+        "text": "'",
+        "loss_target": true
+      },
+      {
+        "token_index": 598,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 599,
+        "token_id": 1607,
+        "text": " times",
+        "loss_target": true
+      },
+      {
+        "token_index": 600,
+        "token_id": 425,
+        "text": " do",
+        "loss_target": true
+      },
+      {
+        "token_index": 601,
+        "token_id": 433,
+        "text": " not",
+        "loss_target": true
+      },
+      {
+        "token_index": 602,
+        "token_id": 1325,
+        "text": " dev",
+        "loss_target": true
+      },
+      {
+        "token_index": 603,
+        "token_id": 3347,
+        "text": "iate",
+        "loss_target": true
+      },
+      {
+        "token_index": 604,
+        "token_id": 1080,
+        "text": " too",
+        "loss_target": true
+      },
+      {
+        "token_index": 605,
+        "token_id": 1908,
+        "text": " far",
+        "loss_target": true
+      },
+      {
+        "token_index": 606,
+        "token_id": 421,
+        "text": " from",
+        "loss_target": true
+      },
+      {
+        "token_index": 607,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 608,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 609,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 610,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 611,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 612,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 613,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 614,
+        "token_id": 2169,
+        "text": " hours",
+        "loss_target": true
+      },
+      {
+        "token_index": 615,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 616,
+        "token_id": 855,
+        "text": "In",
+        "loss_target": true
+      },
+      {
+        "token_index": 617,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": true
+      },
+      {
+        "token_index": 618,
+        "token_id": 1737,
+        "text": " case",
+        "loss_target": true
+      },
+      {
+        "token_index": 619,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 620,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 621,
+        "token_id": 2741,
+        "text": " standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 622,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 623,
+        "token_id": 2109,
+        "text": " provides",
+        "loss_target": true
+      },
+      {
+        "token_index": 624,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 625,
+        "token_id": 496,
+        "text": " more",
+        "loss_target": true
+      },
+      {
+        "token_index": 626,
+        "token_id": 4168,
+        "text": " accurate",
+        "loss_target": true
+      },
+      {
+        "token_index": 627,
+        "token_id": 8159,
+        "text": " representation",
+        "loss_target": true
+      },
+      {
+        "token_index": 628,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 629,
+        "token_id": 22175,
+        "text": " dispersion",
+        "loss_target": true
+      },
+      {
+        "token_index": 630,
+        "token_id": 626,
+        "text": " than",
+        "loss_target": true
+      },
+      {
+        "token_index": 631,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 632,
+        "token_id": 1576,
+        "text": " range",
+        "loss_target": true
+      },
+      {
+        "token_index": 633,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 634,
+        "token_id": 1209,
+        "text": "the",
+        "loss_target": true
+      },
+      {
+        "token_index": 635,
+        "token_id": 2123,
+        "text": " difference",
+        "loss_target": true
+      },
+      {
+        "token_index": 636,
+        "token_id": 832,
+        "text": " between",
+        "loss_target": true
+      },
+      {
+        "token_index": 637,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 638,
+        "token_id": 3782,
+        "text": " maximum",
+        "loss_target": true
+      },
+      {
+        "token_index": 639,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 640,
+        "token_id": 4941,
+        "text": " minimum",
+        "loss_target": true
+      },
+      {
+        "token_index": 641,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 642,
+        "token_id": 969,
+        "text": "),",
+        "loss_target": true
+      },
+      {
+        "token_index": 643,
+        "token_id": 353,
+        "text": " as",
+        "loss_target": true
+      },
+      {
+        "token_index": 644,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 645,
+        "token_id": 1576,
+        "text": " range",
+        "loss_target": true
+      },
+      {
+        "token_index": 646,
+        "token_id": 364,
+        "text": " can",
+        "loss_target": true
+      },
+      {
+        "token_index": 647,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 648,
+        "token_id": 8168,
+        "text": " heavily",
+        "loss_target": true
+      },
+      {
+        "token_index": 649,
+        "token_id": 8759,
+        "text": " influenced",
+        "loss_target": true
+      },
+      {
+        "token_index": 650,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 651,
+        "token_id": 2646,
+        "text": " extreme",
+        "loss_target": true
+      },
+      {
+        "token_index": 652,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 653,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 654,
+        "token_id": 455,
+        "text": "out",
+        "loss_target": true
+      },
+      {
+        "token_index": 655,
+        "token_id": 11366,
+        "text": "liers",
+        "loss_target": true
+      },
+      {
+        "token_index": 656,
+        "token_id": 905,
+        "text": ").",
+        "loss_target": true
+      },
+      {
+        "token_index": 657,
+        "token_id": 370,
+        "text": " The",
+        "loss_target": true
+      },
+      {
+        "token_index": 658,
+        "token_id": 2741,
+        "text": " standard",
+        "loss_target": true
+      },
+      {
+        "token_index": 659,
+        "token_id": 15881,
+        "text": " deviation",
+        "loss_target": true
+      },
+      {
+        "token_index": 660,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 661,
+        "token_id": 331,
+        "text": " on",
+        "loss_target": true
+      },
+      {
+        "token_index": 662,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 663,
+        "token_id": 546,
+        "text": " other",
+        "loss_target": true
+      },
+      {
+        "token_index": 664,
+        "token_id": 1010,
+        "text": " hand",
+        "loss_target": true
+      },
+      {
+        "token_index": 665,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 666,
+        "token_id": 2532,
+        "text": " takes",
+        "loss_target": true
+      },
+      {
+        "token_index": 667,
+        "token_id": 613,
+        "text": " into",
+        "loss_target": true
+      },
+      {
+        "token_index": 668,
+        "token_id": 2614,
+        "text": " account",
+        "loss_target": true
+      },
+      {
+        "token_index": 669,
+        "token_id": 491,
+        "text": " all",
+        "loss_target": true
+      },
+      {
+        "token_index": 670,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 671,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": true
+      },
+      {
+        "token_index": 672,
+        "token_id": 2864,
+        "text": " points",
+        "loss_target": true
+      },
+      {
+        "token_index": 673,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 674,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 675,
+        "token_id": 1093,
+        "text": " less",
+        "loss_target": true
+      },
+      {
+        "token_index": 676,
+        "token_id": 3797,
+        "text": " affected",
+        "loss_target": true
+      },
+      {
+        "token_index": 677,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 678,
+        "token_id": 536,
+        "text": " out",
+        "loss_target": true
+      },
+      {
+        "token_index": 679,
+        "token_id": 11366,
+        "text": "liers",
+        "loss_target": true
+      },
+      {
+        "token_index": 680,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 681,
+        "token_id": 32763,
+        "text": "<|assistant_end|>",
+        "loss_target": true
+      },
+      {
+        "token_index": 682,
+        "token_id": 32760,
+        "text": "<|user_start|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 683,
+        "token_id": 18393,
+        "text": "Would",
+        "loss_target": false
+      },
+      {
+        "token_index": 684,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": false
+      },
+      {
+        "token_index": 685,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": false
+      },
+      {
+        "token_index": 686,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": false
+      },
+      {
+        "token_index": 687,
+        "token_id": 350,
+        "text": " or",
+        "loss_target": false
+      },
+      {
+        "token_index": 688,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": false
+      },
+      {
+        "token_index": 689,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": false
+      },
+      {
+        "token_index": 690,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": false
+      },
+      {
+        "token_index": 691,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": false
+      },
+      {
+        "token_index": 692,
+        "token_id": 1207,
+        "text": " better",
+        "loss_target": false
+      },
+      {
+        "token_index": 693,
+        "token_id": 8159,
+        "text": " representation",
+        "loss_target": false
+      },
+      {
+        "token_index": 694,
+        "token_id": 325,
+        "text": " for",
+        "loss_target": false
+      },
+      {
+        "token_index": 695,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 696,
+        "token_id": 4141,
+        "text": " central",
+        "loss_target": false
+      },
+      {
+        "token_index": 697,
+        "token_id": 11120,
+        "text": " tendency",
+        "loss_target": false
+      },
+      {
+        "token_index": 698,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": false
+      },
+      {
+        "token_index": 699,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": false
+      },
+      {
+        "token_index": 700,
+        "token_id": 12812,
+        "text": " dataset",
+        "loss_target": false
+      },
+      {
+        "token_index": 701,
+        "token_id": 626,
+        "text": " than",
+        "loss_target": false
+      },
+      {
+        "token_index": 702,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": false
+      },
+      {
+        "token_index": 703,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": false
+      },
+      {
+        "token_index": 704,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": false
+      },
+      {
+        "token_index": 705,
+        "token_id": 32761,
+        "text": "<|user_end|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 706,
+        "token_id": 32762,
+        "text": "<|assistant_start|>",
+        "loss_target": false
+      },
+      {
+        "token_index": 707,
+        "token_id": 855,
+        "text": "In",
+        "loss_target": true
+      },
+      {
+        "token_index": 708,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": true
+      },
+      {
+        "token_index": 709,
+        "token_id": 12812,
+        "text": " dataset",
+        "loss_target": true
+      },
+      {
+        "token_index": 710,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 711,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 712,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": true
+      },
+      {
+        "token_index": 713,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 714,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 715,
+        "token_id": 1188,
+        "text": " might",
+        "loss_target": true
+      },
+      {
+        "token_index": 716,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 717,
+        "token_id": 496,
+        "text": " more",
+        "loss_target": true
+      },
+      {
+        "token_index": 718,
+        "token_id": 12585,
+        "text": " representative",
+        "loss_target": true
+      },
+      {
+        "token_index": 719,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 720,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 721,
+        "token_id": 4141,
+        "text": " central",
+        "loss_target": true
+      },
+      {
+        "token_index": 722,
+        "token_id": 11120,
+        "text": " tendency",
+        "loss_target": true
+      },
+      {
+        "token_index": 723,
+        "token_id": 626,
+        "text": " than",
+        "loss_target": true
+      },
+      {
+        "token_index": 724,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 725,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 726,
+        "token_id": 1447,
+        "text": " due",
+        "loss_target": true
+      },
+      {
+        "token_index": 727,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": true
+      },
+      {
+        "token_index": 728,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 729,
+        "token_id": 3748,
+        "text": " presence",
+        "loss_target": true
+      },
+      {
+        "token_index": 730,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 731,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 732,
+        "token_id": 1280,
+        "text": " few",
+        "loss_target": true
+      },
+      {
+        "token_index": 733,
+        "token_id": 1819,
+        "text": " higher",
+        "loss_target": true
+      },
+      {
+        "token_index": 734,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 735,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 736,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 737,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 738,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 739,
+        "token_id": 54,
+        "text": "6",
+        "loss_target": true
+      },
+      {
+        "token_index": 740,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 741,
+        "token_id": 333,
+        "text": " that",
+        "loss_target": true
+      },
+      {
+        "token_index": 742,
+        "token_id": 616,
+        "text": " may",
+        "loss_target": true
+      },
+      {
+        "token_index": 743,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 744,
+        "token_id": 9651,
+        "text": " pulling",
+        "loss_target": true
+      },
+      {
+        "token_index": 745,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 746,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 747,
+        "token_id": 3899,
+        "text": " slightly",
+        "loss_target": true
+      },
+      {
+        "token_index": 748,
+        "token_id": 16048,
+        "text": " upwards",
+        "loss_target": true
+      },
+      {
+        "token_index": 749,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 750,
+        "token_id": 2096,
+        "text": "To",
+        "loss_target": true
+      },
+      {
+        "token_index": 751,
+        "token_id": 6888,
+        "text": " calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 752,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 753,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": true
+      },
+      {
+        "token_index": 754,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 755,
+        "token_id": 816,
+        "text": " first",
+        "loss_target": true
+      },
+      {
+        "token_index": 756,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 757,
+        "token_id": 6161,
+        "text": " arrange",
+        "loss_target": true
+      },
+      {
+        "token_index": 758,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 759,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": true
+      },
+      {
+        "token_index": 760,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 761,
+        "token_id": 17716,
+        "text": " asc",
+        "loss_target": true
+      },
+      {
+        "token_index": 762,
+        "token_id": 1602,
+        "text": "ending",
+        "loss_target": true
+      },
+      {
+        "token_index": 763,
+        "token_id": 1676,
+        "text": " order",
+        "loss_target": true
+      },
+      {
+        "token_index": 764,
+        "token_id": 58,
+        "text": ":",
+        "loss_target": true
+      },
+      {
+        "token_index": 765,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 766,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 767,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 768,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 769,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 770,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 771,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 772,
+        "token_id": 49,
+        "text": "1",
+        "loss_target": true
+      },
+      {
+        "token_index": 773,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 774,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 775,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 776,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 777,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 778,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 779,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 780,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 781,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 782,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 783,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 784,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 785,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 786,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 787,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 788,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 789,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 790,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 791,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 792,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 793,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 794,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 795,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 796,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 797,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 798,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 799,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 800,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 801,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 802,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 803,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 804,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 805,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 806,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 807,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 808,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 809,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 810,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 811,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 812,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 813,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 814,
+        "token_id": 52,
+        "text": "4",
+        "loss_target": true
+      },
+      {
+        "token_index": 815,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 816,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 817,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 818,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 819,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 820,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 821,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 822,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 823,
+        "token_id": 54,
+        "text": "6",
+        "loss_target": true
+      },
+      {
+        "token_index": 824,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 825,
+        "token_id": 4041,
+        "text": " Since",
+        "loss_target": true
+      },
+      {
+        "token_index": 826,
+        "token_id": 634,
+        "text": " there",
+        "loss_target": true
+      },
+      {
+        "token_index": 827,
+        "token_id": 339,
+        "text": " are",
+        "loss_target": true
+      },
+      {
+        "token_index": 828,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 829,
+        "token_id": 555,
+        "text": "20",
+        "loss_target": true
+      },
+      {
+        "token_index": 830,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 831,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 832,
+        "token_id": 281,
+        "text": "an",
+        "loss_target": true
+      },
+      {
+        "token_index": 833,
+        "token_id": 868,
+        "text": " even",
+        "loss_target": true
+      },
+      {
+        "token_index": 834,
+        "token_id": 1186,
+        "text": " number",
+        "loss_target": true
+      },
+      {
+        "token_index": 835,
+        "token_id": 969,
+        "text": "),",
+        "loss_target": true
+      },
+      {
+        "token_index": 836,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 837,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": true
+      },
+      {
+        "token_index": 838,
+        "token_id": 467,
+        "text": " will",
+        "loss_target": true
+      },
+      {
+        "token_index": 839,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 840,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 841,
+        "token_id": 2469,
+        "text": " average",
+        "loss_target": true
+      },
+      {
+        "token_index": 842,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 843,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 844,
+        "token_id": 801,
+        "text": " two",
+        "loss_target": true
+      },
+      {
+        "token_index": 845,
+        "token_id": 3892,
+        "text": " middle",
+        "loss_target": true
+      },
+      {
+        "token_index": 846,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 847,
+        "token_id": 58,
+        "text": ":",
+        "loss_target": true
+      },
+      {
+        "token_index": 848,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 849,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 850,
+        "token_id": 2888,
+        "text": " +",
+        "loss_target": true
+      },
+      {
+        "token_index": 851,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 852,
+        "token_id": 51,
+        "text": "3",
+        "loss_target": true
+      },
+      {
+        "token_index": 853,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 854,
+        "token_id": 2801,
+        "text": " /",
+        "loss_target": true
+      },
+      {
+        "token_index": 855,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 856,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 857,
+        "token_id": 1565,
+        "text": " =",
+        "loss_target": true
+      },
+      {
+        "token_index": 858,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 859,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 860,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 861,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 862,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 863,
+        "token_id": 2096,
+        "text": "To",
+        "loss_target": true
+      },
+      {
+        "token_index": 864,
+        "token_id": 6888,
+        "text": " calculate",
+        "loss_target": true
+      },
+      {
+        "token_index": 865,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 866,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 867,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 868,
+        "token_id": 2498,
+        "text": " identify",
+        "loss_target": true
+      },
+      {
+        "token_index": 869,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 870,
+        "token_id": 702,
+        "text": " most",
+        "loss_target": true
+      },
+      {
+        "token_index": 871,
+        "token_id": 4310,
+        "text": " frequently",
+        "loss_target": true
+      },
+      {
+        "token_index": 872,
+        "token_id": 8114,
+        "text": " occurring",
+        "loss_target": true
+      },
+      {
+        "token_index": 873,
+        "token_id": 1876,
+        "text": " value",
+        "loss_target": true
+      },
+      {
+        "token_index": 874,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 875,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 876,
+        "token_id": 12812,
+        "text": " dataset",
+        "loss_target": true
+      },
+      {
+        "token_index": 877,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 878,
+        "token_id": 370,
+        "text": " The",
+        "loss_target": true
+      },
+      {
+        "token_index": 879,
+        "token_id": 1876,
+        "text": " value",
+        "loss_target": true
+      },
+      {
+        "token_index": 880,
+        "token_id": 538,
+        "text": " \"",
+        "loss_target": true
+      },
+      {
+        "token_index": 881,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 882,
+        "token_id": 34,
+        "text": "\"",
+        "loss_target": true
+      },
+      {
+        "token_index": 883,
+        "token_id": 4858,
+        "text": " appears",
+        "loss_target": true
+      },
+      {
+        "token_index": 884,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 885,
+        "token_id": 54,
+        "text": "6",
+        "loss_target": true
+      },
+      {
+        "token_index": 886,
+        "token_id": 1607,
+        "text": " times",
+        "loss_target": true
+      },
+      {
+        "token_index": 887,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 888,
+        "token_id": 1267,
+        "text": " making",
+        "loss_target": true
+      },
+      {
+        "token_index": 889,
+        "token_id": 338,
+        "text": " it",
+        "loss_target": true
+      },
+      {
+        "token_index": 890,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 891,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 892,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 893,
+        "token_id": 26367,
+        "text": "Considering",
+        "loss_target": true
+      },
+      {
+        "token_index": 894,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 895,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": true
+      },
+      {
+        "token_index": 896,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 897,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 898,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 899,
+        "token_id": 53,
+        "text": "5",
+        "loss_target": true
+      },
+      {
+        "token_index": 900,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 901,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 902,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 903,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 904,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 905,
+        "token_id": 969,
+        "text": "),",
+        "loss_target": true
+      },
+      {
+        "token_index": 906,
+        "token_id": 1065,
+        "text": " both",
+        "loss_target": true
+      },
+      {
+        "token_index": 907,
+        "token_id": 339,
+        "text": " are",
+        "loss_target": true
+      },
+      {
+        "token_index": 908,
+        "token_id": 1892,
+        "text": " lower",
+        "loss_target": true
+      },
+      {
+        "token_index": 909,
+        "token_id": 626,
+        "text": " than",
+        "loss_target": true
+      },
+      {
+        "token_index": 910,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 911,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 912,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 913,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 914,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 915,
+        "token_id": 4494,
+        "text": "95",
+        "loss_target": true
+      },
+      {
+        "token_index": 916,
+        "token_id": 905,
+        "text": ").",
+        "loss_target": true
+      },
+      {
+        "token_index": 917,
+        "token_id": 617,
+        "text": " This",
+        "loss_target": true
+      },
+      {
+        "token_index": 918,
+        "token_id": 4209,
+        "text": " suggests",
+        "loss_target": true
+      },
+      {
+        "token_index": 919,
+        "token_id": 333,
+        "text": " that",
+        "loss_target": true
+      },
+      {
+        "token_index": 920,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 921,
+        "token_id": 1543,
+        "text": " mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 922,
+        "token_id": 616,
+        "text": " may",
+        "loss_target": true
+      },
+      {
+        "token_index": 923,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 924,
+        "token_id": 3899,
+        "text": " slightly",
+        "loss_target": true
+      },
+      {
+        "token_index": 925,
+        "token_id": 27512,
+        "text": " inflated",
+        "loss_target": true
+      },
+      {
+        "token_index": 926,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 927,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 928,
+        "token_id": 1819,
+        "text": " higher",
+        "loss_target": true
+      },
+      {
+        "token_index": 929,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 930,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 931,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 932,
+        "token_id": 12812,
+        "text": " dataset",
+        "loss_target": true
+      },
+      {
+        "token_index": 933,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 934,
+        "token_id": 370,
+        "text": " The",
+        "loss_target": true
+      },
+      {
+        "token_index": 935,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": true
+      },
+      {
+        "token_index": 936,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 937,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 938,
+        "token_id": 1188,
+        "text": " might",
+        "loss_target": true
+      },
+      {
+        "token_index": 939,
+        "token_id": 1190,
+        "text": " provide",
+        "loss_target": true
+      },
+      {
+        "token_index": 940,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 941,
+        "token_id": 496,
+        "text": " more",
+        "loss_target": true
+      },
+      {
+        "token_index": 942,
+        "token_id": 4168,
+        "text": " accurate",
+        "loss_target": true
+      },
+      {
+        "token_index": 943,
+        "token_id": 8159,
+        "text": " representation",
+        "loss_target": true
+      },
+      {
+        "token_index": 944,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 945,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 946,
+        "token_id": 538,
+        "text": " \"",
+        "loss_target": true
+      },
+      {
+        "token_index": 947,
+        "token_id": 18629,
+        "text": "typ",
+        "loss_target": true
+      },
+      {
+        "token_index": 948,
+        "token_id": 443,
+        "text": "ical",
+        "loss_target": true
+      },
+      {
+        "token_index": 949,
+        "token_id": 34,
+        "text": "\"",
+        "loss_target": true
+      },
+      {
+        "token_index": 950,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 951,
+        "token_id": 618,
+        "text": " time",
+        "loss_target": true
+      },
+      {
+        "token_index": 952,
+        "token_id": 325,
+        "text": " for",
+        "loss_target": true
+      },
+      {
+        "token_index": 953,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 954,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 955,
+        "token_id": 442,
+        "text": " this",
+        "loss_target": true
+      },
+      {
+        "token_index": 956,
+        "token_id": 4090,
+        "text": " sample",
+        "loss_target": true
+      },
+      {
+        "token_index": 957,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 958,
+        "token_id": 353,
+        "text": " as",
+        "loss_target": true
+      },
+      {
+        "token_index": 959,
+        "token_id": 474,
+        "text": " they",
+        "loss_target": true
+      },
+      {
+        "token_index": 960,
+        "token_id": 339,
+        "text": " are",
+        "loss_target": true
+      },
+      {
+        "token_index": 961,
+        "token_id": 1093,
+        "text": " less",
+        "loss_target": true
+      },
+      {
+        "token_index": 962,
+        "token_id": 3797,
+        "text": " affected",
+        "loss_target": true
+      },
+      {
+        "token_index": 963,
+        "token_id": 427,
+        "text": " by",
+        "loss_target": true
+      },
+      {
+        "token_index": 964,
+        "token_id": 2646,
+        "text": " extreme",
+        "loss_target": true
+      },
+      {
+        "token_index": 965,
+        "token_id": 3127,
+        "text": " values",
+        "loss_target": true
+      },
+      {
+        "token_index": 966,
+        "token_id": 351,
+        "text": ".\n\n",
+        "loss_target": true
+      },
+      {
+        "token_index": 967,
+        "token_id": 855,
+        "text": "In",
+        "loss_target": true
+      },
+      {
+        "token_index": 968,
+        "token_id": 1677,
+        "text": " particular",
+        "loss_target": true
+      },
+      {
+        "token_index": 969,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 970,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 971,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 972,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 973,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 974,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 975,
+        "token_id": 6084,
+        "text": " indicates",
+        "loss_target": true
+      },
+      {
+        "token_index": 976,
+        "token_id": 333,
+        "text": " that",
+        "loss_target": true
+      },
+      {
+        "token_index": 977,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 978,
+        "token_id": 702,
+        "text": " most",
+        "loss_target": true
+      },
+      {
+        "token_index": 979,
+        "token_id": 1103,
+        "text": " common",
+        "loss_target": true
+      },
+      {
+        "token_index": 980,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 981,
+        "token_id": 618,
+        "text": " time",
+        "loss_target": true
+      },
+      {
+        "token_index": 982,
+        "token_id": 2086,
+        "text": " among",
+        "loss_target": true
+      },
+      {
+        "token_index": 983,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 984,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 985,
+        "token_id": 32,
+        "text": " ",
+        "loss_target": true
+      },
+      {
+        "token_index": 986,
+        "token_id": 50,
+        "text": "2",
+        "loss_target": true
+      },
+      {
+        "token_index": 987,
+        "token_id": 2169,
+        "text": " hours",
+        "loss_target": true
+      },
+      {
+        "token_index": 988,
+        "token_id": 579,
+        "text": " per",
+        "loss_target": true
+      },
+      {
+        "token_index": 989,
+        "token_id": 1139,
+        "text": " day",
+        "loss_target": true
+      },
+      {
+        "token_index": 990,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 991,
+        "token_id": 617,
+        "text": " This",
+        "loss_target": true
+      },
+      {
+        "token_index": 992,
+        "token_id": 1152,
+        "text": " information",
+        "loss_target": true
+      },
+      {
+        "token_index": 993,
+        "token_id": 364,
+        "text": " can",
+        "loss_target": true
+      },
+      {
+        "token_index": 994,
+        "token_id": 315,
+        "text": " be",
+        "loss_target": true
+      },
+      {
+        "token_index": 995,
+        "token_id": 3959,
+        "text": " valuable",
+        "loss_target": true
+      },
+      {
+        "token_index": 996,
+        "token_id": 286,
+        "text": " in",
+        "loss_target": true
+      },
+      {
+        "token_index": 997,
+        "token_id": 2051,
+        "text": " understanding",
+        "loss_target": true
+      },
+      {
+        "token_index": 998,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 999,
+        "token_id": 1198,
+        "text": " study",
+        "loss_target": true
+      },
+      {
+        "token_index": 1000,
+        "token_id": 5582,
+        "text": " habits",
+        "loss_target": true
+      },
+      {
+        "token_index": 1001,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 1002,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 1003,
+        "token_id": 1225,
+        "text": " students",
+        "loss_target": true
+      },
+      {
+        "token_index": 1004,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 1005,
+        "token_id": 1362,
+        "text": " However",
+        "loss_target": true
+      },
+      {
+        "token_index": 1006,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 1007,
+        "token_id": 338,
+        "text": " it",
+        "loss_target": true
+      },
+      {
+        "token_index": 1008,
+        "token_id": 306,
+        "text": " is",
+        "loss_target": true
+      },
+      {
+        "token_index": 1009,
+        "token_id": 1626,
+        "text": " essential",
+        "loss_target": true
+      },
+      {
+        "token_index": 1010,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": true
+      },
+      {
+        "token_index": 1011,
+        "token_id": 1442,
+        "text": " consider",
+        "loss_target": true
+      },
+      {
+        "token_index": 1012,
+        "token_id": 491,
+        "text": " all",
+        "loss_target": true
+      },
+      {
+        "token_index": 1013,
+        "token_id": 1315,
+        "text": " three",
+        "loss_target": true
+      },
+      {
+        "token_index": 1014,
+        "token_id": 3930,
+        "text": " measures",
+        "loss_target": true
+      },
+      {
+        "token_index": 1015,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 1016,
+        "token_id": 4141,
+        "text": " central",
+        "loss_target": true
+      },
+      {
+        "token_index": 1017,
+        "token_id": 11120,
+        "text": " tendency",
+        "loss_target": true
+      },
+      {
+        "token_index": 1018,
+        "token_id": 404,
+        "text": " (",
+        "loss_target": true
+      },
+      {
+        "token_index": 1019,
+        "token_id": 31492,
+        "text": "mean",
+        "loss_target": true
+      },
+      {
+        "token_index": 1020,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 1021,
+        "token_id": 17786,
+        "text": " median",
+        "loss_target": true
+      },
+      {
+        "token_index": 1022,
+        "token_id": 44,
+        "text": ",",
+        "loss_target": true
+      },
+      {
+        "token_index": 1023,
+        "token_id": 288,
+        "text": " and",
+        "loss_target": true
+      },
+      {
+        "token_index": 1024,
+        "token_id": 4696,
+        "text": " mode",
+        "loss_target": true
+      },
+      {
+        "token_index": 1025,
+        "token_id": 41,
+        "text": ")",
+        "loss_target": true
+      },
+      {
+        "token_index": 1026,
+        "token_id": 284,
+        "text": " to",
+        "loss_target": true
+      },
+      {
+        "token_index": 1027,
+        "token_id": 668,
+        "text": " get",
+        "loss_target": true
+      },
+      {
+        "token_index": 1028,
+        "token_id": 257,
+        "text": " a",
+        "loss_target": true
+      },
+      {
+        "token_index": 1029,
+        "token_id": 4531,
+        "text": " comprehensive",
+        "loss_target": true
+      },
+      {
+        "token_index": 1030,
+        "token_id": 2051,
+        "text": " understanding",
+        "loss_target": true
+      },
+      {
+        "token_index": 1031,
+        "token_id": 285,
+        "text": " of",
+        "loss_target": true
+      },
+      {
+        "token_index": 1032,
+        "token_id": 262,
+        "text": " the",
+        "loss_target": true
+      },
+      {
+        "token_index": 1033,
+        "token_id": 1078,
+        "text": " data",
+        "loss_target": true
+      },
+      {
+        "token_index": 1034,
+        "token_id": 46,
+        "text": ".",
+        "loss_target": true
+      },
+      {
+        "token_index": 1035,
+        "token_id": 32763,
+        "text": "<|assistant_end|>",
+        "loss_target": true
+      }
+    ],
+    "prediction_targets_are_shifted_one_position": true
+  }
+}

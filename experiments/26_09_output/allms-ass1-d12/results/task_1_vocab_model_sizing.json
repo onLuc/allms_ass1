@@ -1,0 +1,54 @@
+[
+  {
+    "total_batch_size": 131072,
+    "num_iterations": 132,
+    "depth": 2,
+    "vocab_size": 8192,
+    "n_layer": 2,
+    "n_head": 1,
+    "head_dim": 128,
+    "n_embd": 128,
+    "params_total": 3538986,
+    "params_embedding": 3145728,
+    "params_transformer_matrices": 393228,
+    "embedding_fraction": 0.8888783397278204,
+    "scaling_params": 1441804,
+    "target_tokens": 17301648,
+    "flops_per_token": 14942424,
+    "total_train_flops": 258528560314752,
+    "param_counts": {
+      "wte": 1048576,
+      "value_embeds": 1048576,
+      "lm_head": 1048576,
+      "transformer_matrices": 393228,
+      "scalars": 30,
+      "total": 3538986
+    }
+  },
+  {
+    "total_batch_size": 131072,
+    "num_iterations": 420,
+    "depth": 2,
+    "vocab_size": 32768,
+    "n_layer": 2,
+    "n_head": 1,
+    "head_dim": 128,
+    "n_embd": 128,
+    "params_total": 12976170,
+    "params_embedding": 12582912,
+    "params_transformer_matrices": 393228,
+    "embedding_fraction": 0.9696938310765041,
+    "scaling_params": 4587532,
+    "target_tokens": 55050384,
+    "flops_per_token": 33816792,
+    "total_train_flops": 1861627385248128,
+    "param_counts": {
+      "wte": 4194304,
+      "value_embeds": 4194304,
+      "lm_head": 4194304,
+      "transformer_matrices": 393228,
+      "scalars": 30,
+      "total": 12976170
+    }
+  }
+]

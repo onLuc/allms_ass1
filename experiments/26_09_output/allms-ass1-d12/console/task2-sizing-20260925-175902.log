@@ -1,0 +1,14 @@
+START_UTC 2026-09-25T15:59:02.600074+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m assignment.model_sizing --depths 12 --vocab-sizes 32768 --target-param-data-ratio 12 --json-out /local/s3774740/d12/run/results/task_2_model_sizing.json
+depth   vocab heads n_embd       params  emb%        tokens    batch   steps  FLOPs/tok  train FLOPs
+----------------------------------------------------------------------------------------------------
+   12   32768     6    768  286,261,730   70% 1,321,210,944  524,288   2,520   8.87e+08     1.17e+18
+
+Estimated pretraining wall-clock (hours):
+  d12 GTX 1070 (6.5 TFLOP/s fp32)  MFU  5%: 1001.75h  MFU 10%: 500.87h  MFU 20%: 250.44h
+  d12 A100 (312 TFLOP/s bf16)      MFU 20%:   5.22h  MFU 40%:   2.61h
+
+wrote /local/s3774740/d12/run/results/task_2_model_sizing.json
+END_UTC 2026-09-25T15:59:05.045617+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 2.446

@@ -1,0 +1,13 @@
+START_UTC 2026-09-25T15:58:44.801473+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m nanochat.dataset -n 3 -w 2
+Downloading 4 shards using 2 workers...
+Target directory: /local/s3774740/d12/cache/base_data_climbmix
+
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_00000.parquet (already exists)
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_00001.parquet (already exists)
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_00002.parquet (already exists)
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_06542.parquet (already exists)
+Done! Downloaded: 4/4 shards to /local/s3774740/d12/cache/base_data_climbmix
+END_UTC 2026-09-25T15:58:46.138089+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 1.337

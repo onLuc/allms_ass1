@@ -1,0 +1,52 @@
+[
+  {
+    "sample": 1,
+    "model_tag": "d12v32768",
+    "checkpoint_step": 2520,
+    "prompt": "",
+    "temperature": 1.0,
+    "top_k": 50,
+    "seed": 42,
+    "completion": "Do you really need a power washer that lasts much longer than the recommended? You can find any number of power washers at the hardware store. But if you want to be able to power wash your entire house in as little as an hour? Then this is the product you need. After all, there is less friction involved in the process of removing dirt from your furniture because the spinning and moving elements are much lighter and have little impact on the material. And in any case, don't think anything about going out to the shops with a broken washer because this is very frustrating for everyone who spends more time on the couch. If you are considering"
+  },
+  {
+    "sample": 2,
+    "model_tag": "d12v32768",
+    "checkpoint_step": 2520,
+    "prompt": "",
+    "temperature": 1.0,
+    "top_k": 50,
+    "seed": 42,
+    "completion": "For centuries, the Chinese have believed that the earth around us was formed into three different shapes; a dome, a circle, and a sphere as they identified themselves. The three shapes, or geomorphs, were also known as the Earth or Sung, and they were believed to be created by the formation of the giant rocks of the early age of the Earth, around 440 A.D. The earliest geomorphs were found in Kunming in China, near the city of Huanyu in northeastern China. Archaeological evidence indicates that some of these geomorphs were formed, in fact, by these huge, large"
+  },
+  {
+    "sample": 3,
+    "model_tag": "d12v32768",
+    "checkpoint_step": 2520,
+    "prompt": "",
+    "temperature": 1.0,
+    "top_k": 50,
+    "seed": 42,
+    "completion": "How to create your own video message board\n\nThis is a step by step guide on how to create your own video message board. The board is a little complicated, but in the process it will also help you see how to make one. You can use photos, text or any other media to compose your video, but in case that is not available, you can download software that can help you make your own, such as Adobe Creative Cloud Pro.\n\nStart by choosing a template that is easy to use, simple to copy and follow, and appropriate for the age of the person you wish to be presenting your board to. The templates can be"
+  },
+  {
+    "sample": 4,
+    "model_tag": "d12v32768",
+    "checkpoint_step": 2520,
+    "prompt": "",
+    "temperature": 1.0,
+    "top_k": 50,
+    "seed": 42,
+    "completion": "This tutorial is intended to explain how to make up a 3D printed model, including modeling, creating a mask/shadowmap, and blending effects. This will also be a good starting point for creating simple and complex shapes in the future.\nThis tutorial will show you how to use the OpenCV library and the Kruskal function to create a 3D object. When you are ready to start creating your animation you need to have the following:\na CV (Computer Animation)\nA Computer 3D Animation (Chipboard or similar)\na CV (Computer Art)\na Vector (a picture or animation)\na Font"
+  },
+  {
+    "sample": 5,
+    "model_tag": "d12v32768",
+    "checkpoint_step": 2520,
+    "prompt": "",
+    "temperature": 1.0,
+    "top_k": 50,
+    "seed": 42,
+    "completion": "I think it’s a shame that when my father brought me out of college, there wasn’t a lot to celebrate. Most of life seemed to be like “I did not make it up, I did not fit in, I did not get to experience my place. I wanted it to be like the house, nothing happened.” Because I wasn’t a big, college-room-loving individual. I was going to be around people that I could understand. If I wasn’t in college, I would probably not be around people I couldn’t fit into because their first impression of me was not very good. Then they would have to tell me"
+  }
+]

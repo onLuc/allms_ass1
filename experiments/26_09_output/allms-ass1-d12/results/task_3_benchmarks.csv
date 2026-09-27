@@ -1,0 +1,10 @@
+stage,source,task,correct,total,accuracy_percent,random_baseline_percent,log
+base,base,ARC-Easy,566,2376,23.82,25.0,/local/s3774740/d12/run/console/task3-eval-base-arc-easy-20260925-203032.log
+base,base,ARC-Challenge,285,1172,24.32,25.0,/local/s3774740/d12/run/console/task3-eval-base-arc-challenge-20260925-203050.log
+base,base,GSM8K,0,1319,0.0,0.0,/local/s3774740/d12/run/console/task3-eval-base-gsm8k-20260925-203101.log
+mid,mid,ARC-Easy,849,2376,35.73,25.0,/local/s3774740/d12/run/console/task3-eval-mid-arc-easy-20260925-213426.log
+mid,mid,ARC-Challenge,361,1172,30.8,25.0,/local/s3774740/d12/run/console/task3-eval-mid-arc-challenge-20260925-213443.log
+mid,mid,GSM8K,54,1319,4.09,0.0,/local/s3774740/d12/run/console/task3-eval-mid-gsm8k-20260925-213453.log
+sft,sft,ARC-Easy,599,2376,25.21,25.0,/local/s3774740/d12/run/console/task3-eval-sft-arc-easy-20260925-223302.log
+sft,sft,ARC-Challenge,273,1172,23.29,25.0,/local/s3774740/d12/run/console/task3-eval-sft-arc-challenge-20260925-223319.log
+sft,sft,GSM8K,0,1319,0.0,0.0,/local/s3774740/d12/run/console/task3-eval-sft-gsm8k-20260925-223329.log

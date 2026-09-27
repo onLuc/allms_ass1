@@ -1,0 +1,45 @@
+{
+  "depth": 12,
+  "vocab_size": 32768,
+  "layers": 12,
+  "attention_heads": 6,
+  "embedding_dimension": 768,
+  "trainable_parameters": 286261730,
+  "nanochat_scaling_parameters_excluding_embeddings": 110100912,
+  "planned_tokens_from_training_log": 1321205760,
+  "chinchilla_20x_total_parameter_reference_tokens": 5725234600,
+  "nanochat_default_ratio": 12,
+  "observed_tokens_per_scaling_parameter": 11.99995291592135,
+  "model_log_record": {
+    "record": "model",
+    "depth": 12,
+    "model_config": {
+      "sequence_len": 2048,
+      "vocab_size": 32768,
+      "n_layer": 12,
+      "n_head": 6,
+      "n_kv_head": 6,
+      "n_embd": 768,
+      "window_pattern": "L"
+    },
+    "param_counts": {
+      "wte": 25165824,
+      "value_embeds": 150994944,
+      "lm_head": 25165824,
+      "transformer_matrices": 84935088,
+      "scalars": 50,
+      "total": 286261730
+    },
+    "num_scaling_params": 110100912,
+    "num_flops_per_token": 887098032,
+    "total_batch_size": 524288,
+    "num_iterations": 2520,
+    "total_tokens": 1321205760,
+    "tokens_per_scaling_param": 11.99995291592135,
+    "total_training_flops_estimate": 1172039029563064320,
+    "compute_dtype": "torch.bfloat16",
+    "world_size": 1,
+    "wall_time": 1.9,
+    "timestamp": "2026-09-25T17:59:10"
+  }
+}

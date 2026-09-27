@@ -1,0 +1,16 @@
+START_UTC 2026-09-25T18:28:45.027504+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m scripts.base_eval --device-type cuda --eval bpb --model-tag d12v32768 --step 150 --device-batch-size 16 --split-tokens 131072
+2026-09-25 20:28:46,949 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-25 20:28:46,950 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s3774740/d12/cache/base_checkpoints/d12v32768 with step 150
+2026-09-25 20:28:47,277 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 12, 'n_head': 6, 'n_kv_head': 6, 'n_embd': 768, 'window_pattern': 'L'}
+Evaluating model: base_model (step 150)
+Eval modes: bpb
+
+================================================================================
+BPB Evaluation
+================================================================================
+train bpb: 1.269164
+val bpb: 1.273020
+END_UTC 2026-09-25T18:28:49.591949+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 4.565

@@ -1,0 +1,9 @@
+START_UTC 2026-09-26T10:09:41.328773+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m experiments.task_4
+2026-09-26 12:09:43,645 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-26 12:09:43,646 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s3774740/d12/cache/chatsft_checkpoints/d12v32768 with step 2867
+2026-09-26 12:09:43,985 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 12, 'n_head': 6, 'n_kv_head': 6, 'n_embd': 768, 'window_pattern': 'L'}
+Wrote /local/s3774740/d12/run/results/task_4_temperature_sweep.json, /local/s3774740/d12/run/results/task_4_temperature_sweep.md and /local/s3774740/d12/run/results/task_4_published_comparison_template.csv
+END_UTC 2026-09-26T10:09:53.738926+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 12.410

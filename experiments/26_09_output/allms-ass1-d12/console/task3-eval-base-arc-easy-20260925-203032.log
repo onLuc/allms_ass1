@@ -1,0 +1,11 @@
+START_UTC 2026-09-25T18:30:32.907656+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m scripts.chat_eval --device-type cuda --source base --task-name ARC-Easy --model-tag d12v32768 --batch-size 1 --temperature 0 --num-samples 1 --max-new-tokens 512
+2026-09-25 20:30:35,263 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-25 20:30:35,264 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s3774740/d12/cache/base_checkpoints/d12v32768 with step 2520
+2026-09-25 20:30:35,591 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 12, 'n_head': 6, 'n_kv_head': 6, 'n_embd': 768, 'window_pattern': 'L'}
+Downloading https://huggingface.co/api/datasets/allenai/ai2_arc/parquet/ARC-Easy/test/0.parquet ...
+Final: 566/2376 (23.82%)
+ARC-Easy accuracy: 23.82%
+END_UTC 2026-09-25T18:30:50.950308+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 18.043

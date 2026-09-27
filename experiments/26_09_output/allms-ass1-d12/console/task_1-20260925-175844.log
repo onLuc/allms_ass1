@@ -1,0 +1,91 @@
+START_UTC 2026-09-25T15:58:44.676157+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m experiments.task_1
+Downloading 4 shards using 2 workers...
+Target directory: /local/s3774740/d12/cache/base_data_climbmix
+
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_00000.parquet (already exists)
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_00001.parquet (already exists)
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_00002.parquet (already exists)
+Skipping /local/s3774740/d12/cache/base_data_climbmix/shard_06542.parquet (already exists)
+Done! Downloaded: 4/4 shards to /local/s3774740/d12/cache/base_data_climbmix
+Loading English sample from the ClimbMix validation shard...
+  tokenizer_8192: vocab_size=8,192
+  tokenizer_32768: vocab_size=32,768
+
+### Compression: bytes per token (higher is better)
+
+| domain | tokenizer_8192 | tokenizer_32768 | ratio |
+|---|---|---|---|
+| numbers | 2.43 | 2.43 | 1.00x |
+| python | 1.94 | 2.06 | 1.06x |
+| dutch | 2.11 | 2.38 | 1.12x |
+| chinese | 1.00 | 1.12 | 1.12x |
+| whitespace | 2.95 | 4.00 | 1.36x |
+| rare_words | 2.56 | 3.28 | 1.28x |
+| urls | 1.87 | 2.36 | 1.26x |
+| english | 4.02 | 4.80 | 1.19x |
+
+### Sequence length for the same text (tokens)
+
+| domain | tokenizer_8192 | tokenizer_32768 |
+|---|---|---|
+| numbers | 35 | 35 |
+| python | 69 | 65 |
+| dutch | 36 | 32 |
+| chinese | 48 | 43 |
+| whitespace | 19 | 14 |
+| rare_words | 32 | 25 |
+| urls | 53 | 42 |
+| english | 49,853 | 41,768 |
+
+wrote /local/s3774740/d12/run/results/task_1_tokenizer_comparison.json
+depth   vocab heads n_embd       params  emb%        tokens    batch   steps  FLOPs/tok  train FLOPs
+----------------------------------------------------------------------------------------------------
+    2    8192     1    128    3,538,986   89%    17,301,648  131,072     132   1.49e+07     2.59e+14
+    2   32768     1    128   12,976,170   97%    55,050,384  131,072     420   3.38e+07     1.86e+15
+
+Estimated pretraining wall-clock (hours):
+  d2  GTX 1070 (6.5 TFLOP/s fp32)  MFU  5%:   1.59h  MFU 10%:   0.80h  MFU 20%:   0.40h
+  d2  A100 (312 TFLOP/s bf16)      MFU 20%:   0.01h  MFU 40%:   0.00h
+
+wrote /local/s3774740/d12/run/results/task_1_vocab_model_sizing.json
+Example: ' counterproductive'
+Tokenizer vocab: 32768
+Merge-count sample: 5,000,000 UTF-8 bytes from CLIMBMix train
+' counter' (merge #3948, count 94)
+  ' cou' (merge #1548, count 278)
+    ' c' (merge #11, count 41,314)
+      ' ' (base byte)
+      'c' (base byte)
+    'ou' (merge #24, count 27,884)
+      'o' (base byte)
+      'u' (base byte)
+  'nter' (merge #2621, count 156)
+    'n' (base byte)
+    'ter' (merge #106, count 5,480)
+      't' (base byte)
+      'er' (merge #8, count 47,178)
+        'e' (base byte)
+        'r' (base byte)
+'p' (base byte)
+'roductive' (merge #7321, count 25)
+  'roduct' (merge #4507, count 45)
+    'rodu' (merge #1081, count 297)
+      'ro' (merge #38, count 18,513)
+        'r' (base byte)
+        'o' (base byte)
+      'du' (merge #209, count 2,277)
+        'd' (base byte)
+        'u' (base byte)
+    'ct' (merge #42, count 15,161)
+      'c' (base byte)
+      't' (base byte)
+  'ive' (merge #131, count 4,609)
+    'i' (base byte)
+    've' (merge #46, count 13,846)
+      'v' (base byte)
+      'e' (base byte)
+Wrote /local/s3774740/d12/run/results/task_1_merge_tree.txt, /local/s3774740/d12/run/results/task_1_merge_tree.dot and /local/s3774740/d12/run/results/task_1_merge_tree.json
+END_UTC 2026-09-25T15:59:02.174013+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 17.498

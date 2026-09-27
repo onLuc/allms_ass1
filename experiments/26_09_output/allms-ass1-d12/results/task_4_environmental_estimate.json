@@ -1,0 +1,45 @@
+{
+  "method": "trapezoidal integration of nvidia-smi board power samples during training stages",
+  "training_sample_files": [
+    "/local/s3774740/d12/run/hardware/task2-base-train-20260925-175905.csv",
+    "/local/s3774740/d12/run/hardware/task3-mid-train-20260925-211957.csv",
+    "/local/s3774740/d12/run/hardware/task3-sft-train-20260925-214933.csv"
+  ],
+  "gpu_samples": [
+    {
+      "sample_file": "/local/s3774740/d12/run/hardware/task2-base-train-20260925-175905.csv",
+      "gpu_index": "0",
+      "gpu_name": "NVIDIA L40S",
+      "sample_count": 1786,
+      "mean_power_w": 333.0487513997765,
+      "sampled_energy_wh": 831.1145443065936
+    },
+    {
+      "sample_file": "/local/s3774740/d12/run/hardware/task3-mid-train-20260925-211957.csv",
+      "gpu_index": "0",
+      "gpu_name": "NVIDIA L40S",
+      "sample_count": 173,
+      "mean_power_w": 319.42936416184983,
+      "sampled_energy_wh": 76.91023875905972
+    },
+    {
+      "sample_file": "/local/s3774740/d12/run/hardware/task3-sft-train-20260925-214933.csv",
+      "gpu_index": "0",
+      "gpu_name": "NVIDIA L40S",
+      "sample_count": 519,
+      "mean_power_w": 331.16421965317915,
+      "sampled_energy_wh": 239.84319228611804
+    }
+  ],
+  "sampled_gpu_energy_kwh": 1.1478679753517713,
+  "pue_assumption": 1.0,
+  "facility_energy_kwh_estimate": 1.1478679753517713,
+  "grid_carbon_intensity_g_per_kwh": 262.2,
+  "grid_carbon_source": "https://www.electricitymaps.com/grid-in-review-2025/the-netherlands",
+  "estimated_co2_kg": 0.3009709831372344,
+  "limitations": [
+    "GPU board power is sampled at intervals and excludes host CPU and network energy",
+    "PUE defaults to 1.0 unless changed",
+    "Carbon intensity must correspond to the workload location and dates"
+  ]
+}

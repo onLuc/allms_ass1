@@ -1,0 +1,36 @@
+START_UTC 2026-09-25T15:58:46.157560+00:00
+COMMAND /local/s3774740/d12/venv/bin/python -m assignment.tok_compare --tokenizers /local/s3774740/d12/cache/tokenizer_8192 /local/s3774740/d12/cache/tokenizer_32768 --out /local/s3774740/d12/run/results/task_1_tokenizer_comparison.json --english-chars 200000 --n-embd 128
+Loading English sample from the ClimbMix validation shard...
+  tokenizer_8192: vocab_size=8,192
+  tokenizer_32768: vocab_size=32,768
+
+### Compression: bytes per token (higher is better)
+
+| domain | tokenizer_8192 | tokenizer_32768 | ratio |
+|---|---|---|---|
+| numbers | 2.43 | 2.43 | 1.00x |
+| python | 1.94 | 2.06 | 1.06x |
+| dutch | 2.11 | 2.38 | 1.12x |
+| chinese | 1.00 | 1.12 | 1.12x |
+| whitespace | 2.95 | 4.00 | 1.36x |
+| rare_words | 2.56 | 3.28 | 1.28x |
+| urls | 1.87 | 2.36 | 1.26x |
+| english | 4.02 | 4.80 | 1.19x |
+
+### Sequence length for the same text (tokens)
+
+| domain | tokenizer_8192 | tokenizer_32768 |
+|---|---|---|
+| numbers | 35 | 35 |
+| python | 69 | 65 |
+| dutch | 36 | 32 |
+| chinese | 48 | 43 |
+| whitespace | 19 | 14 |
+| rare_words | 32 | 25 |
+| urls | 53 | 42 |
+| english | 49,853 | 41,768 |
+
+wrote /local/s3774740/d12/run/results/task_1_tokenizer_comparison.json
+END_UTC 2026-09-25T15:58:47.553408+00:00
+EXIT_CODE 0
+ELAPSED_SECONDS 1.396

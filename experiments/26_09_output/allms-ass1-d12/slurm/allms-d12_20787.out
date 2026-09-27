@@ -1,0 +1,4 @@
+Running on ceratanium.liacs.nl, working in /local/s3774740/d12
+Filesystem               Size  Used Avail Use% Mounted on
+/dev/mapper/r5ssd-local  3.0T  2.9T   91G  97% /local
+Only 91 GB free on /local, need 100

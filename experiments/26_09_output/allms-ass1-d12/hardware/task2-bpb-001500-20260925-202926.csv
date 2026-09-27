@@ -1,0 +1,2 @@
+time_utc,gpu,name,power_w,utilization_percent,memory_mib
+2026-09-25T18:29:26.560033+00:00,0,NVIDIA L40S,197.56,0,0

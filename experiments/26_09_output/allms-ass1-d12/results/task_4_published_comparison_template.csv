@@ -1,0 +1,4 @@
+model,parameters,ARC-Easy,ARC-Easy source,ARC-Challenge,ARC-Challenge source,GSM8K,GSM8K source
+Nanochat d12v32768,286261730,,,,,,
+HuggingFaceTB/SmolLM2-360M,360M,,https://huggingface.co/HuggingFaceTB/SmolLM2-360M,,https://huggingface.co/HuggingFaceTB/SmolLM2-360M,,https://huggingface.co/HuggingFaceTB/SmolLM2-360M
+Qwen/Qwen2.5-7B,7B,,https://huggingface.co/Qwen/Qwen2.5-7B,,https://huggingface.co/Qwen/Qwen2.5-7B,,https://huggingface.co/Qwen/Qwen2.5-7B

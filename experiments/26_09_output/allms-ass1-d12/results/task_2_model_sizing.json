@@ -1,0 +1,28 @@
+[
+  {
+    "total_batch_size": 524288,
+    "num_iterations": 2520,
+    "depth": 12,
+    "vocab_size": 32768,
+    "n_layer": 12,
+    "n_head": 6,
+    "head_dim": 128,
+    "n_embd": 768,
+    "params_total": 286261730,
+    "params_embedding": 201326592,
+    "params_transformer_matrices": 84935088,
+    "embedding_fraction": 0.7032955191041429,
+    "scaling_params": 110100912,
+    "target_tokens": 1321210944,
+    "flops_per_token": 887098032,
+    "total_train_flops": 1172043628279262208,
+    "param_counts": {
+      "wte": 25165824,
+      "value_embeds": 150994944,
+      "lm_head": 25165824,
+      "transformer_matrices": 84935088,
+      "scalars": 50,
+      "total": 286261730
+    }
+  }
+]
